@@ -9,6 +9,12 @@ export interface Logo {
 
 export type Mode = 'auto' | 'light' | 'dark'
 
+export interface ContactInfo {
+	contact: string
+	support: string
+	admin: string
+}
+
 export interface Config {
 	siteTitle: string
 	siteDescription: string
@@ -18,19 +24,27 @@ export interface Config {
 	noindex: boolean
 	mode: Mode
 	scrollAnimations: boolean
+	emails: ContactInfo
+}
+
+export const contactEmails: ContactInfo = {
+	contact: 'contact@nokara.id',
+	support: 'support@nokara.id',
+	admin: 'admin@nokara.id'
 }
 
 export const configData: Config = {
-	siteTitle: 'Foxi. Tailwind CSS Astro Starter Kit by Oxygenna',
+	siteTitle: 'Jasa Pembuatan Website Timika & Sistem Bisnis | Nokara',
 	siteDescription:
-		'Foxi is a design and development agency that specializes in creating beautiful and functional websites.',
+		'Solusi pembuatan website, aplikasi kasir, dan sistem bisnis terpercaya di Timika & Papua. Digitalisasi usaha Anda bersama tim ahli Nokara!',
 	ogImage: '/og.jpg',
 	logo: {
 		src: '/logo.svg',
-		alt: 'Foxi. logo'
+		alt: 'Nokara Logo'
 	},
 	canonical: true,
 	noindex: false,
 	mode: 'auto',
-	scrollAnimations: true
+	scrollAnimations: true,
+	emails: contactEmails
 }

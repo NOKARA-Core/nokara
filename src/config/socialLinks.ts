@@ -11,17 +11,17 @@ export interface SocialLink {
 export const socialLinks: SocialLink[] = [
 	{
 		name: 'facebook',
-		link: '/',
+		link: 'https://nokara.id',
 		icon: 'fb-icon'
 	},
 	{
 		name: 'twitter',
-		link: '/',
+		link: 'https://nokara.id',
 		icon: 'twitter-icon'
 	},
 	{
 		name: 'discord',
-		link: '/',
+		link: 'https://nokara.id',
 		icon: 'discord-icon'
 	}
 ]

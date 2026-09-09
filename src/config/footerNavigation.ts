@@ -35,77 +35,86 @@ export interface FooterData {
 
 export const footerNavigationData: FooterData = {
 	footerAbout: {
-		title: 'Foxi.',
+		title: 'Nokara',
 		aboutText:
-			'Expertly made, responsive, accessible components in React and HTML ready to be used on your website or app. Just copy and paste them on your Tailwind CSS project.',
+			'Solusi rekayasa perangkat lunak, aplikasi kasir toko, dan digitalisasi bisnis terpercaya untuk pelaku usaha di Timika, Papua, dan Indonesia Timur. Terinspirasi dari filosofi Noken Papua.',
 		logo: {
 			src: '/logo.svg',
-			alt: 'The tailwind astro theme',
-			text: 'Foxi.'
+			alt: 'Nokara - Solusi Bisnis Digital Papua',
+			text: 'Nokara'
 		}
 	},
 	footerColumns: [
 		{
-			category: 'Product',
+			category: 'Layanan & Solusi',
 			subCategories: [
 				{
-					subCategory: 'Features',
+					subCategory: 'Fitur Unggulan',
 					subCategoryLink: '/features'
 				},
 				{
-					subCategory: 'FAQ',
-					subCategoryLink: '/faq'
-				},
-				{
-					subCategory: 'Pricing',
+					subCategory: 'Paket & Estimasi',
 					subCategoryLink: '/pricing'
 				},
 				{
-					subCategory: 'Changelog',
+					subCategory: 'Tanya Jawab (FAQ)',
+					subCategoryLink: '/faq'
+				},
+				{
+					subCategory: 'Catatan Rilis',
 					subCategoryLink: '/changelog'
 				},
 				{
-					subCategory: 'Terms',
+					subCategory: 'Ketentuan Layanan',
 					subCategoryLink: '/terms'
 				}
 			]
 		},
 		{
-			category: 'About us',
+			category: 'Tentang Nokara',
 			subCategories: [
 				{
-					subCategory: 'About us',
-					subCategoryLink: '/'
+					subCategory: 'Profil Founder',
+					subCategoryLink: 'https://nokara.id/about'
 				},
 				{
-					subCategory: 'News',
-					subCategoryLink: '/blog'
+					subCategory: 'Portofolio Nokara.id',
+					subCategoryLink: 'https://nokara.id/work'
 				},
 				{
-					subCategory: 'Careers',
+					subCategory: 'Layanan Enterprise',
+					subCategoryLink: 'https://nokara.id/services'
+				},
+				{
+					subCategory: 'Blog & Edukasi',
 					subCategoryLink: '/blog'
 				}
 			]
 		},
 		{
-			category: 'Get in touch',
+			category: 'Kontak Resmi',
 			subCategories: [
 				{
-					subCategory: 'Contact',
-					subCategoryLink: '/contact'
+					subCategory: 'contact@nokara.id',
+					subCategoryLink: 'mailto:contact@nokara.id'
 				},
 				{
-					subCategory: 'Support',
-					subCategoryLink: '/contact'
+					subCategory: 'support@nokara.id',
+					subCategoryLink: 'mailto:support@nokara.id'
 				},
 				{
-					subCategory: 'Join us',
+					subCategory: 'admin@nokara.id',
+					subCategoryLink: 'mailto:admin@nokara.id'
+				},
+				{
+					subCategory: 'Formulir Kontak',
 					subCategoryLink: '/contact'
 				}
 			]
 		}
 	],
 	subFooter: {
-		copywriteText: '© Foxi 2024.'
+		copywriteText:
+			'© 2026 Nokara. Dibuat dengan dedikasi oleh Muhammad Amin Hidayat (Founder Nokara.id - www.nokara.id)'
 	}
 }
