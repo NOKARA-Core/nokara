@@ -1,10 +1,26 @@
 import { defineConfig } from "astro/config";
 import icon from "astro-icon";
-
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://foxi.netlify.app",
+  server: {
+    port: 6000,
+  },
+  site: "https://nokara.biz.id",
   integrations: [icon(), sitemap()],
+  // optional:
+  // If your site will be available at different URLs (e.g. both https://nokara.biz.id and https://www.nokara.biz.id),
+  // you can configure alternate URLs for SEO purposes.
+  // If you only plan to use one canonical URL, you can omit alternateUrls.
+  // alternateUrls: {
+  //   canonical: "https://nokara.biz.id",
+  //   // If you also want to support www.nokara.biz.id as an alternate URL:
+  //   // alternate: "https://www.nokara.biz.id",
+  // },
+  // If you want to redirect one canonical URL to another, use the redirects object.
+  // For example, to redirect from www to non-www:
+  // redirects: {
+  //   "https://www.nokara.biz.id": "https://nokara.biz.id",
+  // },
 });
