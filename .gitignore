@@ -22,3 +22,10 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# .md ai
+PROJECT_OVERVIEW.md
+TONE_AND_AUDIENCE.md
+SEO_AND_LINKING_RULES.md
+TEMPLATE_GUARDRAILS.md
+SECURITY_AND_STANDARDS.md
