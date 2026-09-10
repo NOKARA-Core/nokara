@@ -36,17 +36,22 @@ export default {
       colors: {
         transparent: "transparent",
         primary: {
-          50: "#fdf2f8",
-          100: "#fce7f3",
-          200: "#fbcfe8",
-          300: "#f9a8d4",
-          400: "#f472b6",
-          500: "#E2187D",
-          600: "#db2777",
-          700: "#be185d",
-          800: "#9d174d",
-          900: "#831843",
-          950: "#500724",
+          50: "#FAF6E8",
+          100: "#F4ECC9",
+          200: "#EBDCA2",
+          300: "#DFC15D", // Light/Hover Gold
+          400: "#D9B846",
+          500: "#D4AF37", // Base Gold
+          600: "#BA921E",
+          700: "#AA820A", // Dark/Border Gold
+          800: "#7C5D05",
+          900: "#543F03",
+          950: "#332601",
+        },
+        gold: {
+          base: "#D4AF37",
+          dark: "#AA820A",
+          light: "#DFC15D",
         },
         neutral: {
           50: "#f8fafc",

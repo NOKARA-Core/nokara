@@ -39,33 +39,33 @@ Foxi is a free, highly customizable, and production-ready template for Astro, ut
 
 | Feature                   | Free Version               | Pro Version                                                      |
 | :------------------------ | :------------------------- | :--------------------------------------------------------------- |
-| Tailwind CSS              | ✅                         | ✅                                                               |
-| Mobile Responsive         | ✅                         | ✅                                                               |
-| SEO-Friendly              | ✅                         | ✅                                                               |
-| i18n Multilingual Support | ❌                         | ✅                                                               |
-| Sitepins CMS              | ❌                         | ✅                                                               |
-| Content Collections       | ✅                         | ✅                                                               |
-| Mega Menu                 | ❌                         | ✅                                                               |
-| Video Popup               | ❌                         | ✅                                                               |
-| Lottie File Integration   | ❌                         | ✅                                                               |
-| Homepage Variations       | ❌                         | ✅                                                               |
-| Features Page Variations  | ❌                         | ✅                                                               |
-| Integrations Page         | ❌                         | ✅                                                               |
-| Advanced Pricing Page     | ❌                         | ✅                                                               |
-| Blog Collection           | ✅                         | ✅                                                               |
-| Blog Categories           | ✅                         | ✅                                                               |
-| Blog Authors              | ❌                         | ✅                                                               |
-| Post Pagination           | ❌                         | ✅                                                               |
-| eGuides Collection        | ❌                         | ✅                                                               |
-| Roadmap Page              | ❌                         | ✅                                                               |
-| SignUp Page               | ❌                         | ✅                                                               |
-| Changelog Page            | ✅                         | ✅                                                               |
-| FAQ Page                  | ✅                         | ✅                                                               |
-| Terms Page                | ✅                         | ✅                                                               |
-| Working Contact Page      | ❌                         | ✅                                                               |
+| Tailwind CSS              | Ya                         | Ya                                                               |
+| Mobile Responsive         | Ya                         | Ya                                                               |
+| SEO-Friendly              | Ya                         | Ya                                                               |
+| i18n Multilingual Support | Tidak                      | Ya                                                               |
+| Sitepins CMS              | Tidak                      | Ya                                                               |
+| Content Collections       | Ya                         | Ya                                                               |
+| Mega Menu                 | Tidak                      | Ya                                                               |
+| Video Popup               | Tidak                      | Ya                                                               |
+| Lottie File Integration   | Tidak                      | Ya                                                               |
+| Homepage Variations       | Tidak                      | Ya                                                               |
+| Features Page Variations  | Tidak                      | Ya                                                               |
+| Integrations Page         | Tidak                      | Ya                                                               |
+| Advanced Pricing Page     | Tidak                      | Ya                                                               |
+| Blog Collection           | Ya                         | Ya                                                               |
+| Blog Categories           | Ya                         | Ya                                                               |
+| Blog Authors              | Tidak                      | Ya                                                               |
+| Post Pagination           | Tidak                      | Ya                                                               |
+| eGuides Collection        | Tidak                      | Ya                                                               |
+| Roadmap Page              | Tidak                      | Ya                                                               |
+| SignUp Page               | Tidak                      | Ya                                                               |
+| Changelog Page            | Ya                         | Ya                                                               |
+| FAQ Page                  | Ya                         | Ya                                                               |
+| Terms Page                | Ya                         | Ya                                                               |
+| Working Contact Page      | Tidak                      | Ya                                                               |
 | Total Pages               | 10                         | 20+                                                              |
 |                           |                            |                                                                  |
-| Free Updates              | ✅                         | ✅                                                               |
+| Free Updates              | Ya                         | Ya                                                               |
 | License                   | MIT                        | Commercial                                                       |
 |                           |                            |                                                                  |
 | Pricing                   | Free                       | $79.99                                                           |

@@ -66,10 +66,10 @@ h6 {
 	@apply text-base lg:text-lg;
 }
 main a {
-	@apply text-primary-500 hover:text-primary-600;
+	@apply text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 transition-colors;
 }
 .highlight {
-	@apply text-primary-500;
+	@apply text-primary-600 dark:text-primary-400;
 }
 .small {
 	@apply text-sm font-normal text-neutral-400 dark:text-neutral-500;
