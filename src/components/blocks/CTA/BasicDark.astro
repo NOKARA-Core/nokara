@@ -1,7 +1,7 @@
 ---
-// Basic Dark Call To Action section
+// Nokara Digital Transformation Call To Action Section
 // ------------
-// Description: A centered call to action section that contains: a title, text, background image, notification and a button.
+// Description: Centered CTA section with headline, description, trust points, and primary/secondary action buttons.
 
 // Components
 // - Layout
@@ -9,34 +9,75 @@ import Section from '../../ui/Section.astro'
 import Row from '../../ui/Row.astro'
 import Col from '../../ui/Col.astro'
 // - UI
-import CTA from '../../ui/CTA.astro'
-import Button from '../../ui/Button.astro'
-import ChipNotification from '../../ui/ChipNotification.astro'
-import { Image } from 'astro:assets'
-import Highlight from '../../ui/Highlight.astro'
+import { Icon } from 'astro-icon/components'
 
-// Content
-import ctaImage from '../../../assets/cta-dark-bg.webp'
-import badge from '../../../assets/badge.svg'
+// Props
+type Props = {
+	classes?: string
+}
+const { classes } = Astro.props
+
+const trustPoints = [
+	'Konsultasi alur bisnis langsung dengan tim pengembang',
+	'Pendampingan penuh hingga tim operasional Anda lancar',
+	'Standar keamanan data terenkripsi dan performa akses super cepat'
+]
 ---
 
-<Section>
+<Section id="konsultasi-cta" classes={classes}>
 	<Row>
 		<Col span="1" />
 		<Col span="10">
-			<CTA
-				title="Join Over 30,000 Satisfied Users!"
-				text="Discover why thousands of professionals trust our platform to streamline their workflow and enhance productivity. Get started today and see the difference for yourself!"
-				mode="dark"
-				bg={ctaImage}
+			<div
+				class="relative overflow-hidden rounded-2xl border border-primary-500/40 bg-gradient-to-b from-neutral-900/90 via-neutral-950 to-neutral-950 p-8 text-center shadow-2xl shadow-primary-500/10 lg:p-16 backdrop-blur-sm"
 			>
-				<ChipNotification radius="rounded-full" classes="mb-6 box">
-					<Image src={badge} alt="Product of the Year" class="h-12 w-12" slot="button" />
-					<span class="hidden md:block">#1 Product of the Year,</span>
-					<Highlight classes="md:ml-2"> Product Hunt </Highlight>
-				</ChipNotification>
-				<Button size="lg" style="primary"> Get started now! </Button>
-			</CTA>
+				{/* Subtle gold glow backdrop effect */}
+				<div
+					class="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 h-48 w-96 rounded-full bg-primary-500/15 blur-3xl"
+					aria-hidden="true"
+				></div>
+
+				<div class="relative z-10 max-w-3xl mx-auto flex flex-col items-center">
+					<h2 class="text-2xl font-bold tracking-tight text-neutral-50 sm:text-3xl lg:text-4xl text-balance">
+						Siap Mengembangkan Usaha Anda dengan Sistem Digital yang Tepat?
+					</h2>
+					<p class="mt-4 text-base text-neutral-300 leading-relaxed sm:text-lg text-balance">
+						Mulai dari pembukuan otomatis, pencatatan inventaris stok, hingga website profil bisnis. Tim Nokara siap mendampingi proses digitalisasi bisnis Anda di Timika, Papua, dan seluruh penjuru nusantara tanpa istilah teknis yang membingungkan.
+					</p>
+
+					{/* Trust Points */}
+					<ul class="my-8 flex flex-col gap-3 text-left sm:gap-3.5">
+						{
+							trustPoints.map((point) => (
+								<li class="flex items-start gap-3 text-sm text-neutral-200 sm:text-base">
+									<span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center text-primary-400">
+										<Icon name="check-circle" class="h-5 w-5" />
+									</span>
+									<span>{point}</span>
+								</li>
+							))
+						}
+					</ul>
+
+					{/* Action Buttons */}
+					<div class="flex flex-col w-full sm:w-auto sm:flex-row items-center justify-center gap-4">
+						<a
+							href="mailto:contact@nokara.id"
+							class="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-primary-500 px-6 py-3.5 text-base font-bold text-neutral-950 shadow-lg shadow-primary-500/25 transition-all duration-300 hover:bg-primary-300 hover:shadow-primary-500/40 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950"
+						>
+							Konsultasikan Kebutuhan Sistem
+						</a>
+						<a
+							href="https://nokara.id/work"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="w-full sm:w-auto inline-flex items-center justify-center rounded-lg border-2 border-primary-500/80 bg-transparent px-6 py-3.5 text-base font-semibold text-primary-300 transition-all duration-300 hover:border-primary-400 hover:bg-primary-500/10 hover:text-primary-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950"
+						>
+							Lihat Portofolio Resmi
+						</a>
+					</div>
+				</div>
+			</div>
 		</Col>
 		<Col span="1" />
 	</Row>
