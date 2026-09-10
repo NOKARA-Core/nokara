@@ -4,7 +4,7 @@
 import Layout from '../layouts/Layout.astro'
 // - UI
 import Hero from '../components/blocks/hero/PageHeader.astro'
-import RoadmapTimeline from '../components/blocks/education/RoadmapTimeline.astro'
+import TrackCards from '../components/blocks/education/TrackCards.astro'
 import SocialProof from '../components/blocks/socialproof/Basic.astro'
 import FAQ from '../components/blocks/FAQ/Basic.astro'
 import Testimonial from '../components/blocks/testimonials/BasicDark.astro'
@@ -14,14 +14,14 @@ import CTA from '../components/blocks/CTA/BasicDark.astro'
 // Content
 // - SEO
 const SEO = {
-	title: 'Roadmap Belajar Talenta Digital Papua & Indonesia Timur | Nokara',
+	title: 'Roadmap Talenta Digital: Pilih Jalur Keahlian Anda | Nokara',
 	description:
-		'Panduan kurikulum teknis mandiri dari dasar hingga tingkat lanjut. Disusun realistis, bertahap, dan berfokus pada kebutuhan nyata industri: Jaringan, Web, Mobile Offline-First, Cloud, dan Kecerdasan Buatan.'
+		'Panduan kurikulum belajar mandiri yang disusun terpisah per bidang. Realistis, relevan dengan kebutuhan lapangan di Papua dan kawasan timur, dari dasar hingga siap kerja.'
 }
 // - Page Header
 const header = {
-	title: 'Roadmap Talenta Digital <strong>Indonesia Timur</strong>',
-	text: 'Panduan kurikulum teknis mandiri dari dasar hingga tingkat lanjut. Disusun realistis, bertahap, dan berfokus pada kebutuhan nyata industri: Jaringan, Web, Mobile Offline-First, Cloud, dan Kecerdasan Buatan.'
+	title: 'Roadmap Talenta Digital: <strong>Pilih Jalur Keahlian Anda</strong>',
+	text: 'Panduan kurikulum belajar mandiri yang disusun terpisah per bidang. Realistis, relevan dengan kebutuhan lapangan di Papua dan kawasan timur, dari dasar hingga siap kerja.'
 }
 // - Testimonial data
 import testimonialBackground from '../assets/testi2.png'
@@ -35,7 +35,7 @@ const testimonialData = {
 
 <Layout title={SEO.title} description={SEO.description}>
 	<Hero title={header.title} text={header.text} />
-	<RoadmapTimeline />
+	<TrackCards />
 	<SocialProof />
 	<Feature />
 	<Testimonial

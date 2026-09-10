@@ -1,0 +1,314 @@
+---
+// TrackCards Section (Independent Learning Tracks)
+// ------------
+// Description: 6 Kategori Jalur Belajar Mandiri Talenta Digital Papua & Indonesia Timur.
+
+// Components
+import Section from '../../ui/Section.astro'
+import Row from '../../ui/Row.astro'
+import Col from '../../ui/Col.astro'
+import { Icon } from 'astro-icon/components'
+
+interface Track {
+	id: string
+	category: string
+	badge: string
+	iconName: string
+	targetAudience: string
+	relevance: string
+	fundamental: {
+		title: string
+		items: string[]
+	}
+	advanced: {
+		title: string
+		items: string[]
+	}
+	emailSubject: string
+}
+
+const tracks: Track[] = [
+	{
+		id: 'network',
+		category: 'Network & Infrastruktur',
+		badge: 'Jaringan Fisik & Server',
+		iconName: 'signal',
+		targetAudience: 'Teknisi ISP lokal, staf jaringan kantor distrik/desa, dan admin LAN kantor.',
+		relevance: 'Kebutuhan teknisi jaringan sangat tinggi untuk kantor distrik, sekolah, puskesmas, ISP lokal, dan operasional industri daerah.',
+		fundamental: {
+			title: 'Tingkat Dasar (Fundamental)',
+			items: [
+				'Model TCP/IP & OSI Layer dalam pemecahan masalah koneksi.',
+				'Standar pengkabelan LAN (UTP/RJ45) & crimping kabel yang rapi.',
+				'Subnetting IPv4 & konfigurasi router, switch, serta AP WiFi dasar.'
+			]
+		},
+		advanced: {
+			title: 'Tingkat Lanjutan (Siap Kerja)',
+			items: [
+				'Manajemen bandwidth MikroTik (Simple Queue, PCQ) ramah koneksi terbatas.',
+				'Konfigurasi VLAN & routing antar segmen jaringan instansi.',
+				'Konfigurasi wireless Point-to-Point (PtP) & monitoring jaringan (Dude/PRTG).'
+			]
+		},
+		emailSubject: 'Tanya%20Jalur%20Network%20dan%20Infrastruktur'
+	},
+	{
+		id: 'programming',
+		category: 'Logika & Pemrograman',
+		badge: 'Pondasi Komputasi',
+		iconName: 'code-bracket',
+		targetAudience: 'Pemula komputasi yang ingin membangun pola pikir analitis dan problem solving.',
+		relevance: 'Pondasi logika bagi siapa saja yang baru mengenal rekayasa perangkat lunak agar tidak kaget saat membangun sistem aplikasi.',
+		fundamental: {
+			title: 'Tingkat Dasar (Fundamental)',
+			items: [
+				'Alur logika algoritma, pemecahan masalah bertahap, & pseudocode.',
+				'Tipe data dasar, struktur kendali (if-else, loop/perulangan), & fungsi.',
+				'Pengoperasian Terminal Linux dasar (Bash) & version control Git/GitHub.'
+			]
+		},
+		advanced: {
+			title: 'Tingkat Lanjutan (Siap Kerja)',
+			items: [
+				'Konsep Object-Oriented Programming (OOP) & modularitas kode.',
+				'Struktur data esensial (List, Map, Dictionary, Queue) untuk performa memori.',
+				'Prinsip penulisan kode bersih (clean code) & penanganan eror sistematis.'
+			]
+		},
+		emailSubject: 'Tanya%20Jalur%20Logika%20dan%20Pemrograman'
+	},
+	{
+		id: 'web',
+		category: 'Web Development',
+		badge: 'Frontend & Backend',
+		iconName: 'window',
+		targetAudience: 'Pengembang website profil usaha, sistem pembukuan web, dan portal daerah.',
+		relevance: 'Solusi paling cepat untuk membangun kehadiran digital UMKM, portal informasi distrik, dan sistem administrasi kantor terintegrasi.',
+		fundamental: {
+			title: 'Tingkat Dasar (Fundamental)',
+			items: [
+				'HTML semantik ramah aksesibilitas (a11y) & SEO mesin pencari.',
+				'Modern CSS (Flexbox, CSS Grid) & utility framework Tailwind CSS.',
+				'Pembuatan website statis super cepat & ringan dengan Astro / Next.js.'
+			]
+		},
+		advanced: {
+			title: 'Tingkat Lanjutan (Siap Kerja)',
+			items: [
+				'Perancangan arsitektur RESTful API mandiri & serialisasi JSON.',
+				'Integrasi database relasional (PostgreSQL/MySQL) & operasi CRUD.',
+				'Sistem otentikasi login aman (JWT, token-based session, & password hashing).'
+			]
+		},
+		emailSubject: 'Tanya%20Jalur%20Web%20Development'
+	},
+	{
+		id: 'mobile',
+		category: 'Mobile App (Offline-First)',
+		badge: 'Android & Smartphone',
+		iconName: 'device-phone-mobile',
+		targetAudience: 'Pengembang aplikasi lapangan untuk pengguna ponsel berspesifikasi standar.',
+		relevance: 'Mayoritas masyarakat dan pelaku usaha beroperasi via ponsel pintar; aplikasi harus tahan banting saat internet tidak tersedia.',
+		fundamental: {
+			title: 'Tingkat Dasar (Fundamental)',
+			items: [
+				'Dasar antarmuka (UI) menggunakan Flutter atau React Native.',
+				'Desain tata letak responsif yang hemat memori untuk ponsel terjangkau.',
+				'Konsumsi data REST API & penanganan status loading serta kegagalan sinyal.'
+			]
+		},
+		advanced: {
+			title: 'Tingkat Lanjutan (Siap Kerja)',
+			items: [
+				'Arsitektur Offline-First (aplikasi tetap jalan normal tanpa sinyal).',
+				'Penyimpanan database lokal pada perangkat (SQLite / WatermelonDB).',
+				'Mekanisme sinkronisasi data otomatis saat perangkat mendeteksi sinyal kembali.'
+			]
+		},
+		emailSubject: 'Tanya%20Jalur%20Mobile%20App%20Offline%20First'
+	},
+	{
+		id: 'devops',
+		category: 'DevOps & Server',
+		badge: 'Cloud, VPS & Hardening',
+		iconName: 'server-stack',
+		targetAudience: 'Pengelola server mandiri instansi, pengaman database, dan sysadmin lokal.',
+		relevance: 'Mengelola server mandiri agar sistem daerah tidak mudah tumbang dan data operasional sensitif tidak bocor ke pihak luar.',
+		fundamental: {
+			title: 'Tingkat Dasar (Fundamental)',
+			items: [
+				'Perintah dasar sistem operasi Linux Ubuntu Server pada Virtual Private Server (VPS).',
+				'Dasar containerization dengan Docker & Docker Compose untuk konsistensi sistem.',
+				'Konfigurasi SSH aman & manajemen hak akses pengguna server.'
+			]
+		},
+		advanced: {
+			title: 'Tingkat Lanjutan (Siap Kerja)',
+			items: [
+				'Konfigurasi Web Server Nginx reverse proxy, nama domain, & sertifikat SSL otomatis.',
+				'Automated backup database terjadwal ke penyimpanan cloud terdistribusi.',
+				'Hardening keamanan server: Firewall dasar (UFW) & penutupan port rentan.'
+			]
+		},
+		emailSubject: 'Tanya%20Jalur%20DevOps%20dan%20Server'
+	},
+	{
+		id: 'ai',
+		category: 'AI Terapan (Kecerdasan Buatan)',
+		badge: 'Otomasi & LLM Terapan',
+		iconName: 'cpu-chip',
+		targetAudience: 'Staf administrasi, engineer sistem, dan pelaku usaha yang ingin efisiensi tinggi.',
+		relevance: 'Meningkatkan efisiensi kerja tim secara drastis tanpa perlu membangun model kecerdasan buatan mahal dari nol.',
+		fundamental: {
+			title: 'Tingkat Dasar (Fundamental)',
+			items: [
+				'Teknik Prompt Engineering efektif untuk perumusan solusi bisnis & penulisan konten.',
+				'Otomasi rekapitulasi data dokumen operasional dan ekstraksi teks terstruktur.',
+				'Pemanfaatan alat bantu kecerdasan buatan untuk coding & debugging cepat.'
+			]
+		},
+		advanced: {
+			title: 'Tingkat Lanjutan (Siap Kerja)',
+			items: [
+				'Integrasi API LLM ke sistem bisnis (chatbot layanan otomatis WhatsApp/Telegram).',
+				'Pencarian dokumen internal pintar berbasis Retrieval-Augmented Generation (RAG dasar).',
+				'Penggunaan model AI open-source lokal (seperti Ollama) tanpa ketergantungan cloud.'
+			]
+		},
+		emailSubject: 'Tanya%20Jalur%20AI%20Terapan'
+	}
+]
+---
+
+<Section id="independent-tracks" padding="top" classes="bg-neutral-50 dark:bg-neutral-950">
+	<Row>
+		<Col span="12">
+			{/* Section Header */}
+			<div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+				<span class="inline-block rounded-full bg-primary-500/10 border border-primary-500/30 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-primary-400 mb-3">
+					Jalur Belajar Mandiri (Independent Tracks)
+				</span>
+				<h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50">
+					6 Bidang Rekayasa yang Relevan untuk Daerah
+				</h2>
+				<p class="mt-3 text-sm sm:text-base text-neutral-600 dark:text-neutral-300 leading-relaxed">
+					Setiap jalur berdiri sendiri dan dapat dipelajari sesuai minat atau kebutuhan pekerjaan Anda di lapangan. Tidak harus mengambil semua modul sekaligus.
+				</p>
+			</div>
+
+			{/* 6 Grid Cards Container */}
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+				{
+					tracks.map((track) => (
+						<div
+							id={`track-${track.id}`}
+							class="flex flex-col justify-between rounded-2xl border border-neutral-200 bg-white p-6 shadow-xl transition-all duration-300 hover:border-primary-500/50 hover:shadow-2xl hover:shadow-primary-500/10 dark:border-neutral-800 dark:bg-neutral-900/90 lg:p-7 backdrop-blur-sm"
+						>
+							<div>
+								{/* Card Top: Category Badge */}
+								<div class="flex items-center justify-between gap-2 mb-4">
+									<span class="inline-flex items-center rounded-md bg-primary-500/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary-400 border border-primary-500/30">
+										{track.badge}
+									</span>
+									<span class="text-xs font-semibold text-neutral-400 dark:text-neutral-500">
+										Mandiri
+									</span>
+								</div>
+
+								{/* Category Title */}
+								<h3 class="text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 mb-2">
+									{track.category}
+								</h3>
+
+								{/* Target & Relevance Box */}
+								<div class="mb-5 rounded-lg bg-neutral-50 p-3.5 border border-neutral-100 dark:bg-neutral-950/60 dark:border-neutral-800/80">
+									<span class="block text-xs font-bold uppercase tracking-wider text-primary-400 mb-1">
+										Relevansi Daerah:
+									</span>
+									<p class="text-xs text-neutral-600 dark:text-neutral-300 leading-relaxed m-0">
+										{track.relevance}
+									</p>
+								</div>
+
+								{/* Section 1: Tingkat Dasar (Fundamental) */}
+								<div class="mb-5 pt-3 border-t border-neutral-200 dark:border-neutral-800/80">
+									<div class="flex items-center gap-2 mb-2.5">
+										<span class="h-2 w-2 rounded-full bg-primary-500"></span>
+										<h4 class="text-xs font-bold uppercase tracking-wider text-neutral-800 dark:text-neutral-200">
+											{track.fundamental.title}
+										</h4>
+									</div>
+									<ul class="space-y-2">
+										{track.fundamental.items.map((item) => (
+											<li class="flex items-start gap-2 text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+												<span class="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center text-primary-500">
+													<Icon name="check-circle" class="h-4 w-4" />
+												</span>
+												<span>{item}</span>
+											</li>
+										))}
+									</ul>
+								</div>
+
+								{/* Section 2: Tingkat Lanjutan (Siap Kerja) */}
+								<div class="mb-6 pt-3 border-t border-neutral-200 dark:border-neutral-800/80">
+									<div class="flex items-center gap-2 mb-2.5">
+										<span class="h-2 w-2 rounded-full bg-primary-400"></span>
+										<h4 class="text-xs font-bold uppercase tracking-wider text-primary-400">
+											{track.advanced.title}
+										</h4>
+									</div>
+									<ul class="space-y-2">
+										{track.advanced.items.map((item) => (
+											<li class="flex items-start gap-2 text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+												<span class="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center text-primary-500">
+													<Icon name="check-circle" class="h-4 w-4" />
+												</span>
+												<span>{item}</span>
+											</li>
+										))}
+									</ul>
+								</div>
+							</div>
+
+							{/* Card Footer: Discussion Action Button */}
+							<div class="pt-4 border-t border-neutral-100 dark:border-neutral-800">
+								<a
+									href={`mailto:support@nokara.id?subject=${track.emailSubject}`}
+									class="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-primary-500/60 bg-primary-500/5 px-4 py-2.5 text-xs sm:text-sm font-semibold text-primary-300 transition-all duration-300 hover:bg-primary-500 hover:text-neutral-950 hover:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
+								>
+									Diskusi Materi Jalur Ini
+								</a>
+							</div>
+						</div>
+					))
+				}
+			</div>
+
+			{/* Discussion Callout Box at Bottom */}
+			<div class="mt-14 sm:mt-18 rounded-2xl border-2 border-primary-500/40 bg-gradient-to-b from-neutral-900/90 via-neutral-950 to-neutral-950 p-6 sm:p-10 text-center shadow-xl shadow-primary-500/10 backdrop-blur-sm">
+				<h3 class="text-xl sm:text-2xl font-bold text-neutral-50 mb-3">
+					Memiliki Pertanyaan Seputar Jalur Belajar?
+				</h3>
+				<p class="text-sm sm:text-base text-neutral-300 max-w-2xl mx-auto leading-relaxed mb-6">
+					Memiliki pertanyaan seputar roadmap atau ingin berdiskusi teknis? Tim engineer Nokara siap berbagi wawasan dan pendampingan untuk talenta lokal.
+				</p>
+				<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+					<a
+						href="mailto:support@nokara.id?subject=Diskusi%20Teknis%20Roadmap%20Talenta%20Digital"
+						class="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-primary-500 px-6 py-3.5 text-sm sm:text-base font-bold text-neutral-950 shadow-lg shadow-primary-500/25 transition-all duration-300 hover:bg-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+					>
+						Hubungi support@nokara.id
+					</a>
+					<a
+						href="/contact"
+						class="w-full sm:w-auto inline-flex items-center justify-center rounded-lg border border-primary-500/80 bg-transparent px-6 py-3.5 text-sm sm:text-base font-semibold text-primary-300 transition-all duration-300 hover:bg-primary-500/10 hover:text-primary-200"
+					>
+						Halaman Kontak Resmi
+					</a>
+				</div>
+			</div>
+		</Col>
+	</Row>
+</Section>
