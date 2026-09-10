@@ -10,6 +10,12 @@ import Row from '../../ui/Row.astro'
 import Col from '../../ui/Col.astro'
 // - UI
 import { Icon } from 'astro-icon/components'
+import ChipNotification from '../../ui/ChipNotification.astro'
+import { Image } from 'astro:assets'
+import Highlight from '../../ui/Highlight.astro'
+
+// Content
+import badge from '../../../assets/badge.svg'
 
 // Props
 type Props = {
@@ -38,6 +44,15 @@ const trustPoints = [
 				></div>
 
 				<div class="relative z-10 max-w-3xl mx-auto flex flex-col items-center">
+					<ChipNotification
+						radius="rounded-full"
+						classes="mb-6 border border-primary-500/30 bg-neutral-900/80 text-neutral-200"
+					>
+						<Image src={badge} alt="Mitra Solusi Digital Terpercaya" class="h-12 w-12" slot="button" />
+						<span class="hidden sm:inline">Mitra Solusi Digital Terpercaya,</span>
+						<Highlight classes="sm:ml-2"> Timika & Papua </Highlight>
+					</ChipNotification>
+
 					<h2 class="text-2xl font-bold tracking-tight text-neutral-50 sm:text-3xl lg:text-4xl text-balance">
 						Siap Mengembangkan Usaha Anda dengan Sistem Digital yang Tepat?
 					</h2>
