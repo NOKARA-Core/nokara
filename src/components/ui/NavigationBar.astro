@@ -39,8 +39,25 @@ const savedNavActions = navActions.map((action) => ({
 	<div class="header__container">
 		<nav aria-label="main navigation" role="navigation" class="header__nav">
 			<!-- Logo -->
-			<a href="/" class="header__logo">
-				<img src={logo.src} alt={logo.alt} width="48" height="48" />
+			<a href="/" class="header__logo" aria-label="Nokara Beranda">
+				<img
+					src="/Logo-Nokara-Dark.png"
+					alt="Nokara Logo"
+					width="48"
+					height="48"
+					class="hidden dark:block w-12 h-12 object-contain"
+					loading="eager"
+					decoding="async"
+				/>
+				<img
+					src="/Logo-Nokara-Light.png"
+					alt="Nokara Logo"
+					width="48"
+					height="48"
+					class="block dark:hidden w-12 h-12 object-contain"
+					loading="eager"
+					decoding="async"
+				/>
 				<span>{logo.text}</span>
 			</a>
 

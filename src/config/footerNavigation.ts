@@ -39,8 +39,8 @@ export const footerNavigationData: FooterData = {
 		aboutText:
 			'Solusi rekayasa perangkat lunak, aplikasi kasir toko, dan digitalisasi bisnis terpercaya untuk pelaku usaha di Timika, Papua, dan Indonesia Timur. Terinspirasi dari filosofi Noken Papua.',
 		logo: {
-			src: '/logo.svg',
-			alt: 'Nokara - Solusi Bisnis Digital Papua',
+			src: '/Logo-Nokara-Dark.png',
+			alt: 'Nokara Logo',
 			text: 'Nokara'
 		}
 	},

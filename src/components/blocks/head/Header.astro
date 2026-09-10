@@ -43,9 +43,40 @@ const {
 		canonical={canonical}
 		noindex={noindex}
 	/>
-	<link rel="icon" href={configData.logo.src} type="image/svg+xml" />
+	<link rel="icon" href="/S-Logo-Nokara-Dark.svg" type="image/svg+xml" sizes="any" />
+	<link rel="alternate icon" href="/favicon.svg" type="image/svg+xml" />
+	<link rel="apple-touch-icon" href="/Logo-Nokara-Dark.png" />
 	<link rel="sitemap" href="/sitemap-index.xml" />
 	<meta name="generator" content={Astro.generator} />
 	<meta name="theme-color" content="#AA820A" />
+	<script
+		type="application/ld+json"
+		is:inline
+		set:html={JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'Organization',
+			name: 'Nokara',
+			url: 'https://nokara.biz.id',
+			logo: 'https://nokara.biz.id/Logo-Nokara-Dark.png',
+			founder: {
+				'@type': 'Person',
+				name: 'Muhammad Amin Hidayat',
+				url: 'https://nokara.id/about'
+			},
+			contactPoint: [
+				{
+					'@type': 'ContactPoint',
+					email: 'contact@nokara.id',
+					contactType: 'sales'
+				},
+				{
+					'@type': 'ContactPoint',
+					email: 'support@nokara.id',
+					contactType: 'technical support'
+				}
+			],
+			sameAs: ['https://nokara.id']
+		})}
+	/>
 	<ClientRouter fallback="swap" />
 </head>

@@ -22,7 +22,24 @@ const { footerAbout, footerColumns, subFooter } = footerNavigationData
 			<div class="footer__cols">
 				<div class="footer__col">
 					<a aria-label="website logo" aria-current="page" class="footer__main-brand" href="/">
-						<img src={footerAbout.logo.src} alt={footerAbout.logo.alt} width="32" height="32" />
+						<img
+							src="/Logo-Nokara-Dark.png"
+							alt="Nokara Logo"
+							width="32"
+							height="32"
+							class="hidden dark:block w-8 h-8 object-contain"
+							loading="lazy"
+							decoding="async"
+						/>
+						<img
+							src="/Logo-Nokara-Light.png"
+							alt="Nokara Logo"
+							width="32"
+							height="32"
+							class="block dark:hidden w-8 h-8 object-contain"
+							loading="lazy"
+							decoding="async"
+						/>
 						{footerAbout.logo.text}
 					</a>
 					<p>

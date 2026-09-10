@@ -33,8 +33,8 @@ export interface NavData {
 
 export const navigationBarData: NavData = {
 	logo: {
-		src: '/logo.svg',
-		alt: 'Nokara - Solusi Bisnis Digital Papua',
+		src: '/Logo-Nokara-Dark.png',
+		alt: 'Nokara Logo',
 		text: 'Nokara'
 	},
 	navItems: [

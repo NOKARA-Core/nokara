@@ -39,7 +39,7 @@ export const configData: Config = {
 		'Solusi pembuatan website, aplikasi kasir, dan sistem bisnis terpercaya di Timika & Papua. Digitalisasi usaha Anda bersama tim ahli Nokara!',
 	ogImage: '/og.jpg',
 	logo: {
-		src: '/logo.svg',
+		src: '/Logo-Nokara-Dark.png',
 		alt: 'Nokara Logo'
 	},
 	canonical: true,
