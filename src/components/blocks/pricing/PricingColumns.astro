@@ -1,7 +1,7 @@
 ---
-// Pricing plabs Section
+// Roadmap Levels Section
 // ------------
-// Description: A section with a list of 3 pricing plans with toggle to switch between monthly and annual pricing.
+// Description: Kurikulum bertahap 3 jenjang talenta digital untuk kawasan Papua & Indonesia Timur.
 
 // Components
 // - Layout
@@ -9,60 +9,143 @@ import Section from '../../ui/Section.astro'
 import Row from '../../ui/Row.astro'
 import Col from '../../ui/Col.astro'
 // - UI
-import PricingTable from '../../ui/pricing-tables/PricingTable.astro'
-import Toggle from '../../ui/forms/form-elements/Toggle.astro'
+import Button from '../../ui/Button.astro'
+import List from '../../ui/List.astro'
+import Badge from '../../ui/Badge.astro'
 
-// Content
-import pricingTablesData from '../../../data/json-files/pricingTablesdata.json'
-
-// Script
-import PricingChange from '../../scripts/PricingPlanChange.astro'
-
-// Props
-type PricingTableData = {
-	header: {
-		title: string
-		subtitle: string
-		currency: string
-		price: string
-		priceLabel: string
-		priceMonthly?: string
-		priceLabelMonthly?: string
-		buttonName: string
-		buttonLink: string
+const roadmapData = [
+	{
+		title: 'Level 1: Pondasi & Jaringan',
+		badge: 'Dasar & Esensial',
+		description:
+			'Membangun pemahaman jaringan fisik, logika komputer, dan website statis yang ringan.',
+		buttonName: 'Pelajari Pondasi',
+		buttonLink: 'mailto:support@nokara.id?subject=Konsultasi%20Roadmap%20Level%201',
+		isFeatured: false,
+		points: [
+			{ listItem: 'Network: Dasar TCP/IP, DNS, & konfigurasi router lokal' },
+			{ listItem: 'Programming: Logika algoritma & dasar pemrograman modern' },
+			{ listItem: 'Web: HTML semantik, CSS, Git, & version control' },
+			{ listItem: 'Target: Mampu setup jaringan lokal & website profil usaha' }
+		]
+	},
+	{
+		title: 'Level 2: Rekayasa Web & Mobile',
+		badge: 'Aplikasi Terapan',
+		description:
+			'Membuat aplikasi bisnis nyata yang mendukung sistem kasir, inventaris, dan database terintegrasi.',
+		buttonName: 'Fokus Terapan',
+		buttonLink: 'mailto:support@nokara.id?subject=Konsultasi%20Roadmap%20Level%202',
+		isFeatured: true,
+		points: [
+			{ listItem: 'Web: RESTful API, PostgreSQL, & autentikasi sistem' },
+			{ listItem: 'Mobile: Aplikasi Android (React Native/Flutter) offline-first' },
+			{ listItem: 'AI Terapan: Integrasi AI API untuk otomasi alur kerja' },
+			{ listItem: 'Target: Mampu membangun sistem ERP & aplikasi bisnis fungsional' }
+		]
+	},
+	{
+		title: 'Level 3: Cloud, DevOps & AI Lanjutan',
+		badge: 'Keandalan & Skala Besar',
+		description:
+			'Mengelola server mandiri, keamanan siber terenkripsi, dan integrasi kecerdasan buatan.',
+		buttonName: 'Tingkat Lanjut',
+		buttonLink: 'mailto:support@nokara.id?subject=Konsultasi%20Roadmap%20Level%203',
+		isFeatured: false,
+		points: [
+			{ listItem: 'DevOps: Docker, Linux Server administration, & CI/CD' },
+			{ listItem: 'Cloud & Security: Reverse proxy, SSL, & hardening server' },
+			{ listItem: 'Advanced AI: Otomasi alur kerja data & pencarian dokumen cerdas' },
+			{ listItem: 'Target: Menjadi engineer sistem andal untuk skala enterprise' }
+		]
 	}
-	body?: {
-		listItems: Array<{ listItem: string }>
-	}
-	footer?: {
-		buttonName: string
-		buttonLink: string
-	}
-	type: 'basic' | 'featured'
-}
-
-const pricingData: PricingTableData[] = pricingTablesData as PricingTableData[]
+]
 ---
 
-<Section>
+<Section id="roadmap-levels">
 	<Row>
-		<Col span="12" align="center" classes="flex items-center justify-center gap-4 mb-12">
-			<span id="monthlyLabel" class="font-semibold text-neutral-400 transition-colors"
-				>Bill monthly</span
-			>
-			<Toggle id="pricingType" label="pricing" showLabel={false} checked={true} />
-			<span
-				class="font-semibold text-neutral-400 text-primary-500 transition-colors"
-				id="annualLabel">Bill annually</span
-			>
-		</Col>
 		{
-			pricingData.map((item, key) => (
+			roadmapData.map((item, key) => (
 				<Col span="4">
-					<PricingTable data={item} listType="checklist" id={`plan-${key}`} />
+					<div
+						id={`level-${key + 1}`}
+						class:list={[
+							'mx-auto flex h-full max-w-sm flex-col justify-between overflow-hidden rounded-xl bg-white p-6 shadow-xl transition-all duration-300 dark:bg-neutral-900 lg:p-8',
+							item.isFeatured
+								? 'border-2 border-primary-500 shadow-2xl shadow-primary-500/20 ring-1 ring-primary-500/50'
+								: 'border border-neutral-200 shadow-neutral-700/5 dark:border-neutral-800 dark:shadow-neutral-950/50'
+						]}
+					>
+						<div class="flex flex-col h-full justify-between">
+							<div>
+								{/* Header & Badge */}
+								<div class="mb-4 flex items-center justify-between">
+									<Badge
+										name={item.badge}
+										type={item.isFeatured ? 'primary' : 'neutral'}
+										classes="font-semibold text-xs px-2.5 py-1"
+									/>
+									{item.isFeatured && (
+										<span class="text-xs font-bold uppercase tracking-wider text-primary-500">
+											Rekomendasi
+										</span>
+									)}
+								</div>
+
+								{/* Title & Description */}
+								<h3 class="mb-2 text-xl font-bold text-neutral-800 dark:text-neutral-50">
+									{item.title}
+								</h3>
+								<p class="mb-6 text-sm text-neutral-600 leading-relaxed dark:text-neutral-400">
+									{item.description}
+								</p>
+
+								{/* Action Button */}
+								<div class="mb-6">
+									<Button
+										size="lg"
+										style={item.isFeatured ? 'primary' : 'secondary'}
+										elevated={item.isFeatured}
+										type="link"
+										link={item.buttonLink}
+										classes={`w-full justify-center ${
+											item.isFeatured
+												? '!bg-primary-500 hover:!bg-primary-300 !text-neutral-950 !font-bold shadow-lg shadow-primary-500/25'
+												: ''
+										}`}
+									>
+										{item.buttonName}
+									</Button>
+								</div>
+
+								{/* Divider */}
+								<hr
+									class:list={[
+										'mb-6 border-t',
+										item.isFeatured
+											? 'border-primary-500/30'
+											: 'border-neutral-200 dark:border-neutral-800'
+									]}
+								/>
+
+								{/* Feature Points */}
+								<div class="space-y-3">
+									<span class="block text-xs font-bold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+										Materi & Target Capaian:
+									</span>
+									<List
+										type="checklist"
+										listItems={item.points}
+										listColor="primary"
+										classes="space-y-3 text-sm [&_li]:leading-snug"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
 				</Col>
 			))
 		}
 	</Row>
 </Section>
-<PricingChange />
+
