@@ -39,7 +39,7 @@ export const navigationBarData: NavData = {
 	},
 	navItems: [
 		{ name: 'Beranda', link: '/' },
-		{ name: 'Paket & Harga', link: '/pricing' },
+		{ name: 'Roadmap', link: '/education' },
 		{ name: 'Fitur', link: '/features' },
 		{
 			name: 'Pusat Edukasi',

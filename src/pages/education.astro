@@ -4,7 +4,7 @@
 import Layout from '../layouts/Layout.astro'
 // - UI
 import Hero from '../components/blocks/hero/PageHeader.astro'
-import Price from '../components/blocks/pricing/PricingColumns.astro'
+import RoadmapTimeline from '../components/blocks/education/RoadmapTimeline.astro'
 import SocialProof from '../components/blocks/socialproof/Basic.astro'
 import FAQ from '../components/blocks/FAQ/Basic.astro'
 import Testimonial from '../components/blocks/testimonials/BasicDark.astro'
@@ -14,21 +14,20 @@ import CTA from '../components/blocks/CTA/BasicDark.astro'
 // Content
 // - SEO
 const SEO = {
-	title: 'Roadmap Talenta Digital: Dari Pondasi Menuju Spesialis Siap Kerja | Nokara',
+	title: 'Roadmap Belajar Talenta Digital Papua & Indonesia Timur | Nokara',
 	description:
-		'Kurikulum belajar bertahap yang disesuaikan dengan realitas kebutuhan industri di Papua dan Indonesia Timur. Praktis, relevan dengan tren AI, Web, Mobile, DevOps, dan Jaringan, tanpa teori yang membingungkan.'
+		'Panduan kurikulum teknis mandiri dari dasar hingga tingkat lanjut. Disusun realistis, bertahap, dan berfokus pada kebutuhan nyata industri: Jaringan, Web, Mobile Offline-First, Cloud, dan Kecerdasan Buatan.'
 }
 // - Page Header
 const header = {
-	title: 'Roadmap Talenta Digital: Dari Pondasi Menuju <strong>Spesialis Siap Kerja</strong>',
-	text: 'Kurikulum belajar bertahap yang disesuaikan dengan realitas kebutuhan industri di Papua dan Indonesia Timur. Praktis, relevan dengan tren AI, Web, Mobile, DevOps, dan Jaringan, tanpa teori yang membingungkan.'
+	title: 'Roadmap Talenta Digital <strong>Indonesia Timur</strong>',
+	text: 'Panduan kurikulum teknis mandiri dari dasar hingga tingkat lanjut. Disusun realistis, bertahap, dan berfokus pada kebutuhan nyata industri: Jaringan, Web, Mobile Offline-First, Cloud, dan Kecerdasan Buatan.'
 }
 // - Testimonial data
 import testimonialBackground from '../assets/testi2.png'
-// import testimonialBackground from '../assets/testimonial-bg-02.webp'
 const testimonialData = {
 	blockquote:
-		"Membangun ekosistem teknologi yang inklusif di Papua adalah kunci pemberdayaan ekonomi lokal. Setiap baris kode yang kami tulis adalah investasi bagi masa depan digital tanah Papua.",
+		'Membangun ekosistem teknologi yang inklusif di Papua adalah kunci pemberdayaan ekonomi lokal. Setiap baris kode yang kami tulis adalah investasi bagi masa depan digital tanah Papua.',
 	figcaption: 'Muhammad Amin Hidayat',
 	cite: 'Founder, Nokara, M.Sc in Computer Science'
 }
@@ -36,7 +35,7 @@ const testimonialData = {
 
 <Layout title={SEO.title} description={SEO.description}>
 	<Hero title={header.title} text={header.text} />
-	<Price />
+	<RoadmapTimeline />
 	<SocialProof />
 	<Feature />
 	<Testimonial

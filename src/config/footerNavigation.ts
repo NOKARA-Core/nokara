@@ -53,8 +53,8 @@ export const footerNavigationData: FooterData = {
 					subCategoryLink: '/features'
 				},
 				{
-					subCategory: 'Paket & Estimasi',
-					subCategoryLink: '/pricing'
+					subCategory: 'Roadmap Edukasi',
+					subCategoryLink: '/education'
 				},
 				{
 					subCategory: 'Tanya Jawab (FAQ)',

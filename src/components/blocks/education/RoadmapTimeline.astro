@@ -1,0 +1,315 @@
+---
+// Roadmap Timeline Section (Mobile-First Vertical Stepper)
+// ------------
+// Description: Komprehensif 5 fase kurikulum talenta digital untuk Papua & Indonesia Timur.
+
+// Components
+import Section from '../../ui/Section.astro'
+import Row from '../../ui/Row.astro'
+import Col from '../../ui/Col.astro'
+import { Icon } from 'astro-icon/components'
+
+interface SubPillar {
+	name: string
+	items: string[]
+}
+
+interface Phase {
+	phaseNumber: number
+	phaseLabel: string
+	title: string
+	subtitle: string
+	description: string
+	tags: string[]
+	pillars: SubPillar[]
+	outcome: string
+}
+
+const phases: Phase[] = [
+	{
+		phaseNumber: 1,
+		phaseLabel: 'Fase 1',
+		title: 'Pondasi Komputasi, Jaringan & Logika',
+		subtitle: 'Network, CLI, Git, & Logika Pemrograman',
+		description:
+			'Membangun pemahaman bagaimana komputer dan internet bekerja di koneksi terbatas, dasar logika pemrograman, serta penguasaan terminal dan version control.',
+		tags: ['Jaringan TCP/IP', 'MikroTik / LAN', 'Python / TypeScript', 'Bash CLI', 'Git & GitHub'],
+		pillars: [
+			{
+				name: 'Jaringan & Infrastruktur',
+				items: [
+					'Pemahaman model TCP/IP, DNS, DHCP, subnetting dasar, dan routing lokal.',
+					'Konfigurasi perangkat router (MikroTik/LAN dasar) dan optimasi bandwidth untuk koneksi daerah.'
+				]
+			},
+			{
+				name: 'Logika Pemrograman',
+				items: [
+					'Alur logika, tipe data, struktur kontrol (kondisi & perulangan), fungsi, dan struktur data dasar.',
+					'Bahasa pondasi modern: Python atau JavaScript/TypeScript dasar untuk pemecahan masalah komputasi.'
+				]
+			},
+			{
+				name: 'Alat Kerja Dasar',
+				items: [
+					'Navigasi terminal Linux dasar (Bash CLI) untuk automasi sistem operasi.',
+					'Version control menggunakan Git & GitHub untuk kolaborasi tim dan backup kode.'
+				]
+			}
+		],
+		outcome:
+			'Mampu merakit konfigurasi jaringan kantor/toko lokal dan membuat website profil usaha statis yang ringan.'
+	},
+	{
+		phaseNumber: 2,
+		phaseLabel: 'Fase 2',
+		title: 'Rekayasa Web Modern & Manajemen Data',
+		subtitle: 'Frontend Cepat, RESTful API, & PostgreSQL',
+		description:
+			'Merancang aplikasi web interaktif, mengelola penyimpanan basis data relasional yang andal, dan menghubungkan antarmuka dengan API backend.',
+		tags: ['HTML Semantik', 'Tailwind CSS', 'Astro / Next.js', 'REST API', 'PostgreSQL / SQLite'],
+		pillars: [
+			{
+				name: 'Web Frontend',
+				items: [
+					'HTML semantik (standar aksesibilitas & SEO) dan modern CSS (Flexbox, Grid, & Tailwind).',
+					'Pembuatan website statis berkinerja super cepat dengan Astro atau Next.js.'
+				]
+			},
+			{
+				name: 'Backend & Integrasi API',
+				items: [
+					'Arsitektur RESTful API mandiri dan penanganan format pertukaran data JSON.',
+					'Sistem otentikasi pengguna aman (JWT, token-based authentication, & user session).'
+				]
+			},
+			{
+				name: 'Manajemen Database',
+				items: [
+					'Desain database relasional (PostgreSQL / SQLite), relasi tabel (one-to-many/many-to-many), dan normalisasi.',
+					'Pengenalan Object-Relational Mapping (ORM) untuk interaksi database yang aman dari SQL Injection.'
+				]
+			}
+		],
+		outcome:
+			'Mampu membangun aplikasi kasir toko (POS), portal pembukuan, atau sistem pencatatan inventaris barang berbasis web.'
+	},
+	{
+		phaseNumber: 3,
+		phaseLabel: 'Fase 3',
+		title: 'Aplikasi Mobile & Pola Akses Luar Jaringan',
+		subtitle: 'Flutter / React Native & Arsitektur Offline-First',
+		description:
+			'Krusial untuk wilayah dengan jangkauan sinyal internet terbatas: merancang aplikasi smartphone yang tetap berfungsi penuh tanpa jaringan dan otomatis sinkron saat sinyal kembali.',
+		tags: ['React Native / Flutter', 'Offline-First', 'SQLite Lokal', 'Background Sync', 'UI Responsif'],
+		pillars: [
+			{
+				name: 'Pengembangan Aplikasi Ponsel',
+				items: [
+					'Framework lintas platform (React Native atau Flutter) untuk efisiensi pembuatan aplikasi Android.',
+					'Desain antarmuka responsif yang ringan dan tidak boros memori pada ponsel berspesifikasi standar.'
+				]
+			},
+			{
+				name: 'Arsitektur Offline-First (Pilar Daerah)',
+				items: [
+					'Penyimpanan database lokal pada perangkat seluler (SQLite, WatermelonDB, atau Hive).',
+					'Mekanisme sinkronisasi otomatis (background sync & conflict resolution) saat perangkat kembali mendeteksi sinyal internet.'
+				]
+			}
+		],
+		outcome:
+			'Mampu membangun aplikasi kasir mobile, absensi pegawai lapangan, dan sistem pencatatan logistik daerah tanpa khawatir internet mati.'
+	},
+	{
+		phaseNumber: 4,
+		phaseLabel: 'Fase 4',
+		title: 'Cloud, Keamanan & Keandalan Sistem',
+		subtitle: 'DevOps, Docker, Linux Server, & Hardening',
+		description:
+			'Menjamin sistem software tetap beroperasi 24/7, aman dari serangan siber atau manipulasi data, dan terdistribusi melalui server mandiri.',
+		tags: ['Docker', 'Linux Ubuntu VPS', 'Nginx Reverse Proxy', 'SSL Otomatis', 'CI/CD Actions'],
+		pillars: [
+			{
+				name: 'Containerization & Server',
+				items: [
+					'Dasar Docker, Docker Compose, dan manajemen container untuk konsistensi lingkungan software.',
+					'Administrasi sistem operasi Linux Ubuntu Server pada Virtual Private Server (VPS).',
+					'Web server & reverse proxy: Nginx/Caddy, konfigurasi nama domain, dan sertifikasi SSL otomatis (HTTPS).'
+				]
+			},
+			{
+				name: 'Otomasi & Keamanan Data',
+				items: [
+					'Alur deployment otomatis menggunakan CI/CD (GitHub Actions) untuk memangkas waktu rilis kode.',
+					'Pengamanan data server: Konfigurasi Firewall dasar (UFW), manajemen cadangan data berkala (automated backup), dan model hak akses minimal (least privilege).'
+				]
+			}
+		],
+		outcome:
+			'Mampu mengelola infrastruktur software perusahaan, portal layanan publik pemerintah daerah, atau startup mandiri yang handal.'
+	},
+	{
+		phaseNumber: 5,
+		phaseLabel: 'Fase 5',
+		title: 'Kecerdasan Buatan Terapan (Applied AI)',
+		subtitle: 'Integrasi LLM API, RAG Dokumen, & AI Mandiri Lokal',
+		description:
+			'Memanfaatkan teknologi kecerdasan buatan untuk otomatisasi pekerjaan operasional, pencarian informasi dokumen cerdas, dan komputasi AI lokal tanpa ketergantungan cloud.',
+		tags: ['Integrasi LLM API', 'RAG Dokumen', 'Vector Embeddings', 'AI Lokal (Ollama)', 'Bot Otomasi'],
+		pillars: [
+			{
+				name: 'Integrasi AI API',
+				items: [
+					'Pemanfaatan model bahasa besar (LLM API) untuk otomasi pekerjaan nyata: ringkasan laporan bisnis, ekstraksi data transaksi, dan bot interaktif WhatsApp/Telegram.'
+				]
+			},
+			{
+				name: 'Pencarian Kontekstual (RAG Dasar)',
+				items: [
+					'Konsep vector embedding dan semantic search untuk pencarian informasi cerdas dari berkas dokumen internal organisasi.',
+					'Menghubungkan basis data dokumen PDF/aturan perusahaan dengan asisten AI tanpa halusinasi data.'
+				]
+			},
+			{
+				name: 'AI Lokal / Komputasi Mandiri',
+				items: [
+					'Menjalankan model AI open-source lokal (seperti Ollama / Llama) langsung di mesin internal tanpa harus terus terhubung internet atau membayar biaya API eksternal.'
+				]
+			}
+		],
+		outcome:
+			'Mampu membangun asisten dokumen cerdas, otomasi rekapitulasi operasional, dan integrasi kecerdasan buatan lokal berbiaya efisien.'
+	}
+]
+---
+
+<Section id="roadmap-timeline" padding="top" classes="bg-neutral-50 dark:bg-neutral-950">
+	<Row>
+		<Col span="1" />
+		<Col span="10">
+			{/* Timeline Header Subtitle */}
+			<div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+				<span class="inline-block rounded-full bg-primary-500/10 border border-primary-500/30 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-primary-400 mb-3">
+					Kurikulum Bertahap (Mobile-First)
+				</span>
+				<h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50">
+					5 Fase Rekayasa Perangkat Lunak Terapan
+				</h2>
+				<p class="mt-3 text-base sm:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed">
+					Setiap tahapan dirancang berurutan: menguasai fondasi fisik terlebih dahulu sebelum melangkah ke aplikasi bisnis, skalabilitas server, dan kecerdasan buatan.
+				</p>
+			</div>
+
+			{/* Vertical Timeline Container */}
+			<div class="relative pl-6 sm:pl-10 md:pl-12 space-y-12 sm:space-y-16 before:absolute before:left-3 sm:before:left-5 md:before:left-6 before:top-4 before:bottom-4 before:w-0.5 before:bg-gradient-to-b before:from-primary-500 before:via-primary-500/50 before:to-primary-500/20">
+				{
+					phases.map((phase) => (
+						<div class="relative group">
+							{/* Phase Circle Indicator */}
+							<div class="absolute -left-6 sm:-left-10 md:-left-12 top-0 flex h-6 w-6 sm:h-10 sm:w-10 -translate-x-1/2 items-center justify-center rounded-full bg-primary-500 text-neutral-950 font-bold text-xs sm:text-sm shadow-lg shadow-primary-500/30 ring-4 ring-neutral-50 dark:ring-neutral-950 transition-transform duration-300 group-hover:scale-110">
+								{phase.phaseNumber}
+							</div>
+
+							{/* Phase Card Content */}
+							<div class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-xl transition-all duration-300 hover:border-primary-500/50 hover:shadow-primary-500/10 dark:border-neutral-800 dark:bg-neutral-900/90 sm:p-8 backdrop-blur-sm">
+								{/* Header & Badges */}
+								<div class="flex flex-wrap items-center justify-between gap-3 mb-3">
+									<span class="inline-flex items-center rounded-md bg-primary-500/15 px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-primary-400 border border-primary-500/30">
+										{phase.phaseLabel}
+									</span>
+									<span class="text-xs font-medium text-neutral-500 dark:text-neutral-400">
+										{phase.subtitle}
+									</span>
+								</div>
+
+								{/* Title & Description */}
+								<h3 class="text-xl sm:text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 mb-3">
+									{phase.title}
+								</h3>
+								<p class="text-sm sm:text-base text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
+									{phase.description}
+								</p>
+
+								{/* Skill Tags */}
+								<div class="flex flex-wrap gap-2 mb-6">
+									{phase.tags.map((tag) => (
+										<span class="inline-flex items-center rounded-full bg-neutral-100 dark:bg-neutral-800 px-3 py-1 text-xs font-medium text-neutral-700 dark:text-neutral-300 border border-neutral-200 dark:border-neutral-700">
+											{tag}
+										</span>
+									))}
+								</div>
+
+								{/* Core Pillars List */}
+								<div class="space-y-4 pt-4 border-t border-neutral-200 dark:border-neutral-800/80">
+									<h4 class="text-xs font-bold uppercase tracking-wider text-primary-400">
+										Materi Keterampilan Inti:
+									</h4>
+									<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+										{phase.pillars.map((pillar) => (
+											<div class="rounded-xl border border-neutral-100 bg-neutral-50 p-4 dark:border-neutral-800/60 dark:bg-neutral-950/60">
+												<h5 class="text-sm font-bold text-neutral-800 dark:text-neutral-200 mb-2">
+													{pillar.name}
+												</h5>
+												<ul class="space-y-2">
+													{pillar.items.map((item) => (
+														<li class="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-normal">
+															<span class="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center text-primary-500">
+																<Icon name="check-circle" class="h-4 w-4" />
+															</span>
+															<span>{item}</span>
+														</li>
+													))}
+												</ul>
+											</div>
+										))}
+									</div>
+								</div>
+
+								{/* Target Output Highlight */}
+								<div class="mt-6 rounded-xl border border-primary-500/30 bg-primary-500/5 p-4 sm:p-5 flex items-start gap-3.5">
+									<span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center text-primary-400">
+										<Icon name="check-circle" class="h-5 w-5" />
+									</span>
+									<div class="text-xs sm:text-sm">
+										<strong class="font-bold text-primary-400 block mb-0.5">
+											Target Capaian Praktis:
+										</strong>
+										<span class="text-neutral-700 dark:text-neutral-200 leading-relaxed">
+											{phase.outcome}
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					))
+				}
+			</div>
+
+			{/* Discussion Callout Box at Bottom */}
+			<div class="mt-16 sm:mt-20 rounded-2xl border-2 border-primary-500/40 bg-gradient-to-b from-neutral-900/90 via-neutral-950 to-neutral-950 p-6 sm:p-10 text-center shadow-xl shadow-primary-500/10 backdrop-blur-sm">
+				<h3 class="text-xl sm:text-2xl font-bold text-neutral-50 mb-3">
+					Ingin Berdiskusi Seputar Jalur Belajar?
+				</h3>
+				<p class="text-sm sm:text-base text-neutral-300 max-w-2xl mx-auto leading-relaxed mb-6">
+					Memiliki pertanyaan seputar kurikulum, kesiapan perangkat laptop, atau ingin berdiskusi teknis langsung dengan tim engineer Nokara?
+				</p>
+				<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+					<a
+						href="mailto:support@nokara.id?subject=Diskusi%20Teknis%20Roadmap%20Talenta%20Digital"
+						class="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-primary-500 px-6 py-3.5 text-sm sm:text-base font-bold text-neutral-950 shadow-lg shadow-primary-500/25 transition-all duration-300 hover:bg-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+					>
+						Hubungi support@nokara.id
+					</a>
+					<a
+						href="/contact"
+						class="w-full sm:w-auto inline-flex items-center justify-center rounded-lg border border-primary-500/80 bg-transparent px-6 py-3.5 text-sm sm:text-base font-semibold text-primary-300 transition-all duration-300 hover:bg-primary-500/10 hover:text-primary-200"
+					>
+						Halaman Kontak Resmi
+					</a>
+				</div>
+			</div>
+		</Col>
+		<Col span="1" />
+	</Row>
+</Section>
