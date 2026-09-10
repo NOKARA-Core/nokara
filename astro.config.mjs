@@ -4,9 +4,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  server: {
-    port: 6000,
-  },
   site: "https://nokara.biz.id",
   integrations: [icon(), sitemap()],
   // optional:
