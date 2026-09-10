@@ -5,7 +5,6 @@ import Layout from '../layouts/Layout.astro'
 // - UI
 import Feature from '../components/blocks/features/FeatureSticky.astro'
 import Hero from '../components/blocks/hero/PageHeader.astro'
-import CTA from '../components/blocks/CTA/BasicDark.astro'
 
 // Data
 import featuresData from '../data/json-files/featuresData.json'
@@ -19,14 +18,14 @@ const featuresSupport = featuresData.filter((feature) => feature.category === 'S
 // Content
 // - SEO
 const SEO = {
-	title: 'Foxi | Features to Boost Productivity & Security',
+	title: 'Fitur Unggulan Sistem & Software Bisnis | Nokara Papua',
 	description:
-		"Explore Foxi's powerful features designed to enhance productivity, ensure top-notch security, and integrate seamlessly with your favorite tools. Join thousands of satisfied users and transform your workflow with Foxi today!"
+		'Sistem kasir cepat, keamanan data berlapis, dan antarmuka ramah pengguna bagi pelaku usaha di Timika, Papua, dan Indonesia Timur bersama Nokara.'
 }
 // - Page Header
 const header = {
-	title: 'Why you and your team will <strong>love</strong> foxi.',
-	text: 'Streamline your tasks, protect your data, and enjoy working with our tools!'
+	title: 'Fitur Handal untuk Percepatan <strong>Bisnis Anda</strong>',
+	text: 'Koneksi cepat, pembukuan rapi, dan sistem yang mudah dipelajari oleh staf dan kasir.'
 }
 ---
 
@@ -59,5 +58,4 @@ const header = {
 		text="Our friendly support team is always here to assist you with any questions or issues."
 		data={featuresSupport}
 	/>
-	<CTA />
 </Layout>
