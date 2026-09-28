@@ -11,34 +11,34 @@ import CTA from '../components/blocks/CTA/BasicDark.astro'
 // Data
 import faqData from '../data/json-files/faqData.json'
 // - FAQ Categories
-const faqPricing = faqData.filter((faq) => faq.category === 'pricing')
-const faqIntegrations = faqData.filter((faq) => faq.category === 'integrations')
+const faqMembership = faqData.filter((faq) => faq.category === 'membership')
+const faqEcosystem = faqData.filter((faq) => faq.category === 'ecosystem')
 
 // Content
 import faqImage1 from '../assets/faq/faq-01.png'
 // - SEO
 const SEO = {
-	title: 'Tanya Jawab (FAQ) Layanan & Sistem | Nokara Papua',
+	title: 'Tanya Jawab Komunitas (FAQ) | Nokara Community Timika',
 	description:
-		'Jawaban lengkap seputar pembuatan website, sistem kasir toko, lama pengerjaan, dan proses pendampingan usaha di Timika & Papua bersama Nokara.'
+		'Jawaban lengkap seputar cara bergabung, kegiatan belajar, kopi darat, dan dukungan ekosistem NOKARA.ID di Timika, Papua.'
 }
 // - Page Header
 const header = {
-	title: 'Pertanyaan yang Sering Diajukan Seputar <strong>Nokara</strong>',
-	text: 'Temukan jawaban seputar layanan, sistem kasir, lama pengerjaan, dan pendampingan teknis.'
+	title: 'Pertanyaan yang Sering Diajukan Seputar <strong>Nokara Community</strong>',
+	text: 'Temukan jawaban lengkap seputar cara bergabung, kurikulum belajar, temu komunitas di Timika, dan kolaborasi karya.'
 }
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
 	<Hero title={header.title} text={header.text} />
 	<FAQ
-		title="Understanding Our Pricing Plans"
-		text="Get all the details on Foxi’s pricing plans. Learn about the costs, discounts, and subscription options to find the best plan that fits your needs and budget."
-		data={faqPricing}
+		title="Keanggotaan & Kegiatan"
+		text="Pertanyaan umum seputar syarat bergabung, biaya, agenda kopi darat, dan alur belajar bagi pemula."
+		data={faqMembership}
 	/>
 	<TextImage
-		title="Why Foxi’s Pricing Plans Offer Great Value"
-		text="At Foxi, we believe in providing exceptional value at every price point. Our pricing plans are designed to cater to a variety of needs, from individuals and small teams to large enterprises. Each plan includes access to our powerful features, seamless integrations, and top-notch customer support. "
+		title="Tumbuh Bersama dari Tanah Papua"
+		text="Nokara Community hadir bukan sebagai kursus berbayar, melainkan wadah nirlaba berfilosofi Noken Papua untuk saling membagikan ilmu, memecahkan kendala teknis bersama, dan membuka jalan bagi talenta lokal menuju industri teknologi profesional."
 		image={faqImage1}
 		mobileImage={faqImage1}
 		imagePosition="left"
@@ -46,9 +46,9 @@ const header = {
 		classes="bg-neutral-50 dark:bg-neutral-900 lg:!py-64"
 	/>
 	<FAQ
-		title="Integrations Made Easy"
-		text="Discover how Foxi seamlessly integrates with your favorite tools and platforms. From Google Calendar to Slack, find out how to connect and enhance your productivity with powerful integrations."
-		data={faqIntegrations}
+		title="Ekosistem & Karya Member"
+		text="Informasi mengenai relasi komunitas dengan induk NOKARA.ID, akses materi kurikulum, dan pengajuan karya proyek."
+		data={faqEcosystem}
 	/>
 	<CTA />
 </Layout>
