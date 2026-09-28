@@ -57,15 +57,11 @@ export const footerNavigationData: FooterData = {
 					subCategoryLink: '/education'
 				},
 				{
-					subCategory: 'Tanya Jawab (FAQ)',
+					subCategory: 'Tanya Jawab Komunitas (FAQ)',
 					subCategoryLink: '/faq'
 				},
 				{
-					subCategory: 'Catatan Rilis & Kegiatan',
-					subCategoryLink: '/changelog'
-				},
-				{
-					subCategory: 'Ketentuan Layanan',
+					subCategory: 'Pedoman & Kode Etik',
 					subCategoryLink: '/terms'
 				}
 			]

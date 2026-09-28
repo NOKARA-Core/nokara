@@ -34,8 +34,8 @@ export interface NavData {
 export const navigationBarData: NavData = {
 	logo: {
 		src: '/Logo-Nokara-Dark.png',
-		alt: 'Nokara Community Logo',
-		text: 'Nokara Community'
+		alt: "",
+		text: ""
 	},
 	navItems: [
 		{ name: 'Beranda', link: '/' },
@@ -45,10 +45,10 @@ export const navigationBarData: NavData = {
 			name: 'Pusat Edukasi',
 			link: '#',
 			submenu: [
-				{ name: 'Blog & Artikel', link: '/blog' },
-				{ name: 'Catatan Rilis', link: '/changelog' },
-				{ name: 'Tanya Jawab (FAQ)', link: '/faq' },
-				{ name: 'Ketentuan Layanan', link: '/terms' }
+				{ name: 'Artikel & Tutorial IT', link: '/blog' },
+				{ name: 'Tanya Jawab Komunitas (FAQ)', link: '/faq' },
+				{ name: 'Pedoman & Kode Etik', link: '/terms' }
+				// { name: 'Catatan Rilis & Kegiatan', link: '/changelog' } // Uncomment jika rute _changelog.astro diaktifkan kembali
 			]
 		},
 		{ name: 'Kontak', link: '/contact' }
