@@ -2,9 +2,12 @@ import { defineConfig } from "astro/config";
 import icon from "astro-icon";
 import sitemap from "@astrojs/sitemap";
 
+// Support custom domain or Vercel production domain dynamically
+const siteUrl = process.env.SITE_URL || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "https://nokara.biz.id");
+
 // https://astro.build/config
 export default defineConfig({
-  site: "https://nokara.biz.id",
+  site: siteUrl,
   integrations: [icon(), sitemap()],
   // optional:
   // If your site will be available at different URLs (e.g. both https://nokara.biz.id and https://www.nokara.biz.id),

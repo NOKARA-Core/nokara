@@ -37,7 +37,7 @@ export const configData: Config = {
 	siteTitle: 'Nokara Community | Wadah Pegiat IT & Talenta Digital Timika Papua',
 	siteDescription:
 		'Platform komunitas IT, wadah belajar rekayasa perangkat lunak, dan showcase karya talenta digital di Timika, Papua. Bagian dari inisiatif ekosistem NOKARA.ID.',
-	ogImage: '/og.jpg',
+	ogImage: '/Logo-Nokara-Dark.png',
 	logo: {
 		src: '/Logo-Nokara-Dark.png',
 		alt: 'Nokara Community Logo'

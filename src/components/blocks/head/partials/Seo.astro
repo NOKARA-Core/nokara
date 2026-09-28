@@ -18,10 +18,10 @@ type Props = {
 	noindex?: boolean
 }
 
-const { title, description, ogImage = '/og.jpg', canonical, noindex } = Astro.props
+const { title, description, ogImage = '/Logo-Nokara-Dark.png', canonical, noindex } = Astro.props
 
-const siteUrl = Astro.site ? new URL(Astro.site).origin : 'https://nokara.biz.id'
-const imagePath = ogImage || '/og.jpg'
+const siteUrl = Astro.site ? new URL(Astro.site).origin : (Astro.url ? Astro.url.origin : 'https://nokara.biz.id')
+const imagePath = ogImage || '/Logo-Nokara-Dark.png'
 const fullOgImageUrl = imagePath.startsWith('http')
 	? imagePath
 	: `${siteUrl}${imagePath.startsWith('/') ? imagePath : `/${imagePath}`}`

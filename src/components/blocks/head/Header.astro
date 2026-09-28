@@ -28,6 +28,8 @@ const {
 	canonical = configData.canonical,
 	noindex = configData.noindex
 } = Astro.props
+
+const siteOrigin = Astro.site ? new URL(Astro.site).origin : (Astro.url ? Astro.url.origin : 'https://nokara.biz.id')
 ---
 
 <head>
@@ -43,8 +45,8 @@ const {
 		canonical={canonical}
 		noindex={noindex}
 	/>
+	<link rel="icon" href="/Logo-Nokara-Dark.png" type="image/png" />
 	<link rel="icon" href="/S-Logo-Nokara-Dark.svg" type="image/svg+xml" sizes="any" />
-	<link rel="alternate icon" href="/favicon.svg" type="image/svg+xml" />
 	<link rel="apple-touch-icon" href="/Logo-Nokara-Dark.png" />
 	<link rel="sitemap" href="/sitemap-index.xml" />
 	<meta name="generator" content={Astro.generator} />
@@ -55,19 +57,21 @@ const {
 		set:html={JSON.stringify({
 			'@context': 'https://schema.org',
 			'@type': 'Organization',
-			name: 'Nokara',
-			url: 'https://nokara.biz.id',
-			logo: 'https://nokara.biz.id/Logo-Nokara-Dark.png',
+			name: 'Nokara Community',
+			url: siteOrigin,
+			logo: `${siteOrigin}/Logo-Nokara-Dark.png`,
+			image: `${siteOrigin}/Logo-Nokara-Dark.png`,
+			description: 'Platform komunitas IT, wadah belajar rekayasa perangkat lunak, dan showcase karya talenta digital di Timika, Papua. Bagian dari inisiatif ekosistem NOKARA.ID.',
 			founder: {
 				'@type': 'Person',
 				name: 'Muhammad Amin Hidayat',
-				url: 'https://nokara.id/about'
+				url: 'https://nokara.id'
 			},
 			contactPoint: [
 				{
 					'@type': 'ContactPoint',
 					email: 'contact@nokara.id',
-					contactType: 'sales'
+					contactType: 'general inquiry'
 				},
 				{
 					'@type': 'ContactPoint',
