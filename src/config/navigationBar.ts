@@ -53,5 +53,12 @@ export const navigationBarData: NavData = {
 		},
 		{ name: 'Kontak', link: '/contact' }
 	],
-	navActions: [{ name: 'Gabung Komunitas', link: '/contact', style: 'primary', size: 'lg' }]
+	navActions: [
+		{
+			name: 'Gabung Komunitas',
+			link: 'https://wa.me/6288242763942?text=Halo%20Nokara%20Community,%20saya%20ingin%20bergabung%20dengan%20komunitas%20IT%20Timika.',
+			style: 'primary',
+			size: 'lg'
+		}
+	]
 }
