@@ -1,27 +1,29 @@
 ---
-title: 'Welcome to Foxi!'
-pubDate: 2024-04-04T05:00:00Z
-description: "We're excited to introduce you to the ultimate productivity app designed to help you manage your tasks effortlessly to help you stay organized and efficient."
-author: 'Eleni K'
+title: 'Selamat Datang di Nokara Community Timika'
+pubDate: 2026-01-15T08:00:00Z
+description: 'Mengenal Nokara Community: wadah berkumpul, belajar rekayasa perangkat lunak, dan memajukan talenta digital di Timika, Papua. Bagian dari ekosistem NOKARA.ID.'
+author: 'Muhammad Amin Hidayat'
 image: '/blog/post-01-cover.png'
-tags: ['productivity', 'announcement']
+tags: ['announcement', 'komunitas']
 ---
 
-Welcome to Foxi! We're excited to introduce you to the ultimate productivity app designed to help you manage your tasks effortlessly. Foxi combines powerful features with an intuitive interface to help you stay organized and efficient.
+Selamat datang di Nokara Community! Kami sangat bersemangat membuka ruang kebersamaan bagi siapa saja di Timika, Papua, yang memiliki minat dan semangat di bidang teknologi informasi dan rekayasa perangkat lunak.
 
-![Foxi is here.](/blog/post-01.png)
+Filosofi brand kami terinspirasi dari **Noken Papua**—sebuah wadah ketangguhan, persatuan, dan tempat bertumbuh bersama. Sebagai bagian dari ekosistem [NOKARA.ID](https://nokara.id), komunitas ini hadir bukan untuk berkompetisi, melainkan untuk saling mengisi dan mengangkat potensi talenta lokal.
 
-We have rolled out new security updates to keep your data safe and secure. Learn more about our latest security enhancements and how they protect you.
+![Nokara Community Timika](/blog/post-01.png)
 
-Whether you're managing personal tasks, collaborating with a team, or tracking your projects, Foxi has you covered. Our mission is to provide you with the tools you need to succeed.
+Tantangan di kawasan Indonesia Timur, khususnya di Papua, memiliki keunikan tersendiri: mulai dari kestabilan akses internet, keterbatasan perangkat komputasi, hingga perlunya sistem yang relevan untuk membantu operasional usaha dan instansi daerah.
 
-> Foxi combines powerful features with an intuitive interface to help you stay organized and efficient!
+Di komunitas ini, kita belajar bersama bagaimana menjawab tantangan tersebut dengan solusi rekayasa teknologi yang nyata dan membumi.
 
-### Key Features
+> Membangun masa depan digital Papua tidak bisa dilakukan sendirian. Dibutuhkan kolaborasi, ketekunan, dan wadah yang saling mendukung.
 
-- **In-App Messaging**: Communicate directly within the app using our integrated messaging system.
-- **Project Management**: Organize and manage your projects with ease.
-- **Time Tracking**: Keep track of the time spent on tasks to improve productivity.
-- **Customizable Dashboards**: Tailor your workspace to fit your needs.
+### Fokus Gerakan Komunitas
 
-Thank you for choosing Foxi. We look forward to helping you achieve your goals!
+- **Roadmap Belajar Mandiri**: Panduan kurikulum terstruktur di 6 bidang (Jaringan, Algoritma, Web, Mobile Offline-First, Linux DevOps, dan AI Terapan).
+- **Temu Kopi Darat & Diskusi**: Sharing session santai di Timika untuk membahas troubleshooting jaringan dan koding.
+- **Showcase Karya Member**: Ruang pameran dan apresiasi karya aplikasi yang dibangun oleh rekan-rekan anggota.
+- **Mentoring Praktisi Industri**: Transfer wawasan arsitektur sistem langsung bersama tim engineer NOKARA.ID.
+
+Mari bergabung dan menjadi bagian dari langkah transformasi digital tanah Papua!
