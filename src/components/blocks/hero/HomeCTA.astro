@@ -22,9 +22,9 @@ import user1 from '../../../assets/avatars/avatar/1.png'
 import user2 from '../../../assets/avatars/avatar/2.png'
 import user3 from '../../../assets/avatars/avatar/3.png'
 const avatars = [
-	{ image: { src: user1.src, alt: 'Pelanggan Nokara' }, link: '/' },
-	{ image: { src: user2.src, alt: 'Pelanggan Nokara' }, link: '/' },
-	{ image: { src: user3.src, alt: 'Pelanggan Nokara' }, link: '/' }
+	{ image: { src: user1.src, alt: 'Member Nokara Community' }, link: '/contact' },
+	{ image: { src: user2.src, alt: 'Member Nokara Community' }, link: '/contact' },
+	{ image: { src: user3.src, alt: 'Member Nokara Community' }, link: '/contact' }
 ]
 ---
 
@@ -33,20 +33,25 @@ const avatars = [
 		<Col span="2" />
 		<Col span="8" align="center">
 			<ChipNotification radius="rounded-full" classes="mb-6">
-				<strong>30K+</strong> satisfied customers
+				<strong>Komunitas IT Timika</strong> &bull; Bagian dari NOKARA.ID
 				<AvatarGroup avatars={avatars} radius="rounded-full" slot="button" />
 			</ChipNotification>
-			<h1>Enhance team <strong>performance</strong> with seamless integration</h1>
+			<h1>Wadah Pegiat &amp; <strong>Talenta IT</strong> di Timika Papua</h1>
 
-			<p class="pb-0 text-lg">Work smarter, not harder, with our innovative platform</p>
-			<Button size="lg" link="/">Get started for free</Button>
+			<p class="pb-0 text-lg text-neutral-600 dark:text-neutral-300">
+				Ruang kolaborasi, belajar rekayasa perangkat lunak, dan showcase karya teknologi anak daerah. Tumbuh bersama membangun ekosistem digital tanah Papua.
+			</p>
+			<div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+				<Button size="lg" link="/contact">Gabung Komunitas</Button>
+				<Button size="lg" style="neutral" link="/features">Lihat Karya Member</Button>
+			</div>
 		</Col>
 		<Col span="2" />
 		<Col span="2" />
 		<Col span="8">
 			<Image
 				src={heroImage}
-				alt="Foxi. The tailwind astro theme"
+				alt="Nokara Community - Platform Komunitas IT di Timika Papua"
 				class="translate-y-8 rounded-[10px] shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
 				format="webp"
 			/></Col

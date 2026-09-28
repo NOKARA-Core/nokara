@@ -34,13 +34,13 @@ export const contactEmails: ContactInfo = {
 }
 
 export const configData: Config = {
-	siteTitle: 'Jasa Pembuatan Website Timika & Sistem Bisnis | Nokara',
+	siteTitle: 'Nokara Community | Wadah Pegiat IT & Talenta Digital Timika Papua',
 	siteDescription:
-		'Solusi pembuatan website, aplikasi kasir, dan sistem bisnis terpercaya di Timika & Papua. Digitalisasi usaha Anda bersama tim ahli Nokara!',
+		'Platform komunitas IT, wadah belajar rekayasa perangkat lunak, dan showcase karya talenta digital di Timika, Papua. Bagian dari inisiatif ekosistem NOKARA.ID.',
 	ogImage: '/og.jpg',
 	logo: {
 		src: '/Logo-Nokara-Dark.png',
-		alt: 'Nokara Logo'
+		alt: 'Nokara Community Logo'
 	},
 	canonical: true,
 	noindex: false,

@@ -34,13 +34,13 @@ export interface NavData {
 export const navigationBarData: NavData = {
 	logo: {
 		src: '/Logo-Nokara-Dark.png',
-		alt: 'Nokara Logo',
-		text: 'Nokara'
+		alt: 'Nokara Community Logo',
+		text: 'Nokara Community'
 	},
 	navItems: [
 		{ name: 'Beranda', link: '/' },
 		{ name: 'Roadmap', link: '/education' },
-		{ name: 'Fitur', link: '/features' },
+		{ name: 'Karya Member', link: '/features' },
 		{
 			name: 'Pusat Edukasi',
 			link: '#',
@@ -53,5 +53,5 @@ export const navigationBarData: NavData = {
 		},
 		{ name: 'Kontak', link: '/contact' }
 	],
-	navActions: [{ name: 'Konsultasi Sekarang', link: '/contact', style: 'primary', size: 'lg' }]
+	navActions: [{ name: 'Gabung Komunitas', link: '/contact', style: 'primary', size: 'lg' }]
 }

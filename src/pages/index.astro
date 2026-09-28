@@ -12,19 +12,31 @@ import CTA from '../components/blocks/CTA/BasicDark.astro'
 // Content
 // - Testimonial background
 import testimonialBackground from '../assets/testi1.png'
-// import testimonialBackground from '../assets/testimonial-bg-01.webp'
 // - SEO
 const SEO = {
-	title: 'Jasa Pembuatan Website Timika & Sistem Bisnis | Nokara',
+	title: 'Nokara Community | Wadah Komunitas IT & Talenta Digital Timika Papua',
 	description:
-		'Solusi pembuatan website, aplikasi kasir toko, dan rekayasa sistem bisnis terpercaya di Timika, Papua, dan kawasan Indonesia Timur bersama Nokara.'
+		'Wadah berkumpul, belajar rekayasa perangkat lunak, dan showcase karya teknologi anak daerah di Timika, Papua. Bagian dari inisiatif ekosistem NOKARA.ID.'
+}
+// - Testimonial Data
+const testimonialData = {
+	blockquote:
+		'Membangun ekosistem teknologi yang inklusif di Papua dimulai dari mempertemukan orang-orang yang mau belajar dan berbagi. Nokara Community adalah wadah untuk saling mengangkat potensi talenta IT daerah.',
+	figcaption: 'Muhammad Amin Hidayat',
+	cite: 'Founder Nokara.id & Inisiator Nokara Community'
 }
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
 	<Hero />
 	<Features />
-	<Testimonial bg={testimonialBackground} bgPosition="right" />
+	<Testimonial
+		bg={testimonialBackground}
+		bgPosition="right"
+		blockquote={testimonialData.blockquote}
+		figcaption={testimonialData.figcaption}
+		cite={testimonialData.cite}
+	/>
 	<HighlightBlocks />
 	<CTA />
 </Layout>

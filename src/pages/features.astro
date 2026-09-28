@@ -7,57 +7,101 @@ import Feature from '../components/blocks/features/FeatureSticky.astro'
 import Hero from '../components/blocks/hero/PageHeader.astro'
 import CTA from '../components/blocks/CTA/BasicDark.astro'
 
-// Data
-import featuresData from '../data/json-files/featuresData.json'
-// - Feature Categories
-const featuresAnalytics = featuresData.filter((feature) => feature.category === 'Analytics')
-const featuresProductivity = featuresData.filter((feature) => feature.category === 'Productivity')
-const featuresSecurity = featuresData.filter((feature) => feature.category === 'Security')
-const featuresIntegrations = featuresData.filter((feature) => feature.category === 'Integrations')
-const featuresSupport = featuresData.filter((feature) => feature.category === 'Support')
+// Member Projects Data
+const umkmProjects = [
+	{
+		title: 'Kasir Cepat Offline-First',
+		icon: 'shopping-cart',
+		description:
+			'Aplikasi kasir toko mandiri yang tetap beroperasi normal saat jaringan mati, lalu menyinkronkan data penjualan otomatis ketika perangkat terhubung sinyal kembali.'
+	},
+	{
+		title: 'Pencatatan Stok Gudang Sederhana',
+		icon: 'circle-stack',
+		description:
+			'Sistem pembukuan stok barang masuk-keluar yang ramah ponsel spesifikasi standar, dibuat untuk meminimalisir selisih persediaan toko lokal.'
+	},
+	{
+		title: 'Estimasi Logistik & Distribusi Daerah',
+		icon: 'arrow-trending-up',
+		description:
+			'Alat bantu hitung estimasi ongkos logistik antardistrik berbasis rute transportasi perintis dan darat di kawasan Mimika.'
+	}
+]
+
+const networkProjects = [
+	{
+		title: 'Monitoring Uptime MikroTik',
+		icon: 'bolt',
+		description:
+			'Sistem notifikasi peringatan dini via Telegram saat router kantor distrik atau tautan radio Point-to-Point terputus.'
+	},
+	{
+		title: 'Captive Portal Hotspot Ringan',
+		icon: 'device-phone-mobile',
+		description:
+			'Halaman masuk WiFi publik yang sangat hemat data dan cepat dimuat, cocok untuk balai desa, sekolah, atau komunitas lokal.'
+	},
+	{
+		title: 'Otomasi Cadangan Database Server',
+		icon: 'shield-check',
+		description:
+			'Script terjadwal untuk mencadangkan database sistem administrasi kantor secara terenkripsi guna mencegah kehilangan data penting.'
+	}
+]
+
+const webProjects = [
+	{
+		title: 'Direktori Usaha & Jasa Mimika',
+		icon: 'computer-desktop',
+		description:
+			'Portal direktori berbasis situs statis super cepat agar warga Timika mudah menemukan kontak teknisi, bengkel, dan usaha lokal.'
+	},
+	{
+		title: 'Sistem Arsip Berkas Digital Sekolah',
+		icon: 'document-chart-bar',
+		description:
+			'Aplikasi pengarsipan surat masuk dan keluar berbasis jaringan lokal (LAN) sekolah tanpa memerlukan biaya sewa cloud bulanan.'
+	},
+	{
+		title: 'Ruang Diskusi & Bantuan Teknis',
+		icon: 'chat-bubble-left-right',
+		description:
+			'Pusat arsip solusi error pemrograman dan konfigurasi jaringan yang pernah dihadapi anggota komunitas saat bertugas di lapangan.'
+	}
+]
 
 // Content
 // - SEO
 const SEO = {
-	title: 'Fitur Unggulan Sistem & Software Bisnis | Nokara Papua',
+	title: 'Karya & Proyek Member Komunitas | Nokara Community Timika',
 	description:
-		'Sistem kasir cepat, keamanan data berlapis, dan antarmuka ramah pengguna bagi pelaku usaha di Timika, Papua, dan Indonesia Timur bersama Nokara.'
+		'Showcase aplikasi, sistem kasir offline, dan infrastruktur jaringan karya pegiat IT Nokara Community di Timika, Papua. Bagian dari NOKARA.ID.'
 }
 // - Page Header
 const header = {
-	title: 'Fitur Handal untuk Percepatan <strong>Bisnis Anda</strong>',
-	text: 'Koneksi cepat, pembukuan rapi, dan sistem yang mudah dipelajari oleh staf dan kasir.'
+	title: 'Karya Nyata & Inovasi <strong>Member Komunitas</strong>',
+	text: 'Etalase proyek perangkat lunak, sistem kasir mandiri, dan solusi jaringan yang dibangun oleh talenta IT lokal di Timika, Papua.'
 }
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
 	<Hero title={header.title} text={header.text} />
 	<Feature
-		title="Insightful Analytics"
-		text="Delve into your data with precision and uncover actionable insights."
-		data={featuresAnalytics}
+		title="Solusi UMKM & Lapangan"
+		text="Aplikasi tangguh dan hemat kuota yang menjawab kebutuhan operasional pelaku usaha di Mimika."
+		data={umkmProjects}
 	/>
 	<Feature
-		title="Efficiency Unleashed"
-		text="Streamline tasks and focus on what matters with tools designed to boost your productivity."
-		data={featuresSecurity}
+		title="Jaringan & Infrastruktur"
+		text="Konfigurasi jaringan andal dan otomasi server yang dirancang oleh teknisi jaringan daerah."
+		data={networkProjects}
 		classes="bg-neutral-50 dark:bg-neutral-900"
 	/>
 	<Feature
-		title="Ultimate Data Protection"
-		text="Keep your data safe with top-notch security measures and real-time threat detection."
-		data={featuresProductivity}
-	/>
-	<Feature
-		title="Seamless Connectivity"
-		text="Effortlessly connect your favorite apps and automate workflows for a smoother workday."
-		data={featuresIntegrations}
-		classes="bg-neutral-50 dark:bg-neutral-900"
-	/>
-	<Feature
-		title="24/7 Expert Help"
-		text="Our friendly support team is always here to assist you with any questions or issues."
-		data={featuresSupport}
+		title="Web Portal & Layanan Warga"
+		text="Situs informasi ringan dan sistem administrasi sekolah tanpa ketergantungan server mahal."
+		data={webProjects}
 	/>
 	<CTA />
 </Layout>

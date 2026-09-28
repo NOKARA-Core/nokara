@@ -24,9 +24,9 @@ type Props = {
 const { classes } = Astro.props
 
 const trustPoints = [
-	'Konsultasi alur bisnis langsung dengan tim pengembang',
-	'Pendampingan penuh hingga tim operasional Anda lancar',
-	'Standar keamanan data terenkripsi dan performa akses super cepat'
+	'Akses kurikulum roadmap terstruktur & diskusi teknis praktis',
+	'Ruang sharing session santai & kolaborasi sesama pegiat IT Mimika',
+	'Showcase proyek karya talenta lokal & terhubung dengan ekosistem NOKARA.ID'
 ]
 ---
 
@@ -48,16 +48,16 @@ const trustPoints = [
 						radius="rounded-full"
 						classes="mb-6 border border-primary-500/30 bg-neutral-900/80 text-neutral-200"
 					>
-						<Image src={badge} alt="Mitra Solusi Digital Terpercaya" class="h-12 w-12" slot="button" />
-						<span class="hidden sm:inline">Mitra Solusi Digital Terpercaya,</span>
-						<Highlight classes="sm:ml-2"> Timika & Papua </Highlight>
+						<Image src={badge} alt="Wadah Komunitas IT Papua" class="h-12 w-12" slot="button" />
+						<span class="hidden sm:inline">Wadah Kolaborasi IT &amp; Talenta,</span>
+						<Highlight classes="sm:ml-2"> Timika &bull; Papua </Highlight>
 					</ChipNotification>
 
 					<h2 class="text-2xl font-bold tracking-tight text-neutral-50 sm:text-3xl lg:text-4xl text-balance">
-						Siap Mengembangkan Usaha Anda dengan Sistem Digital yang Tepat?
+						Siap Bertumbuh Bersama Komunitas IT Timika?
 					</h2>
 					<p class="mt-4 text-base text-neutral-300 leading-relaxed sm:text-lg text-balance">
-						Mulai dari pembukuan otomatis, pencatatan inventaris stok, hingga website profil bisnis. Tim Nokara siap mendampingi proses digitalisasi bisnis Anda di Timika, Papua, dan seluruh penjuru nusantara tanpa istilah teknis yang membingungkan.
+						Baik Anda pemula yang baru mengenal koding, teknisi jaringan lapangan, maupun engineer berpengalaman—pintu Nokara Community selalu terbuka untuk belajar bersama dan memajukan ekosistem teknologi di tanah Papua.
 					</p>
 
 					{/* Trust Points */}
@@ -77,18 +77,18 @@ const trustPoints = [
 					{/* Action Buttons */}
 					<div class="flex flex-col w-full sm:w-auto sm:flex-row items-center justify-center gap-4">
 						<a
-							href="mailto:contact@nokara.id"
+							href="/contact"
 							class="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-primary-500 px-6 py-3.5 text-base font-bold text-neutral-950 shadow-lg shadow-primary-500/25 transition-all duration-300 hover:bg-primary-300 hover:shadow-primary-500/40 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950"
 						>
-							Konsultasikan Kebutuhan Sistem
+							Gabung Komunitas Sekarang
 						</a>
 						<a
-							href="https://nokara.id/work"
+							href="https://nokara.id"
 							target="_blank"
 							rel="noopener noreferrer"
 							class="w-full sm:w-auto inline-flex items-center justify-center rounded-lg border-2 border-primary-500/80 bg-transparent px-6 py-3.5 text-base font-semibold text-primary-300 transition-all duration-300 hover:border-primary-400 hover:bg-primary-500/10 hover:text-primary-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950"
 						>
-							Lihat Portofolio Resmi
+							Kunjungi Induk NOKARA.ID
 						</a>
 					</div>
 				</div>

@@ -35,25 +35,25 @@ export interface FooterData {
 
 export const footerNavigationData: FooterData = {
 	footerAbout: {
-		title: 'Nokara',
+		title: 'Nokara Community',
 		aboutText:
-			'Solusi rekayasa perangkat lunak, aplikasi kasir toko, dan digitalisasi bisnis terpercaya untuk pelaku usaha di Timika, Papua, dan Indonesia Timur. Terinspirasi dari filosofi Noken Papua.',
+			'Wadah komunitas IT, kolaborasi rekayasa perangkat lunak, dan showcase talenta digital di Timika, Papua. Terinspirasi dari filosofi Noken Papua, bagian dari inisiatif ekosistem NOKARA.ID.',
 		logo: {
 			src: '/Logo-Nokara-Dark.png',
-			alt: 'Nokara Logo',
-			text: 'Nokara'
+			alt: 'Nokara Community Logo',
+			text: 'Nokara Community'
 		}
 	},
 	footerColumns: [
 		{
-			category: 'Layanan & Solusi',
+			category: 'Komunitas & Belajar',
 			subCategories: [
 				{
-					subCategory: 'Fitur Unggulan',
+					subCategory: 'Karya Member',
 					subCategoryLink: '/features'
 				},
 				{
-					subCategory: 'Roadmap Edukasi',
+					subCategory: 'Roadmap Talenta',
 					subCategoryLink: '/education'
 				},
 				{
@@ -61,7 +61,7 @@ export const footerNavigationData: FooterData = {
 					subCategoryLink: '/faq'
 				},
 				{
-					subCategory: 'Catatan Rilis',
+					subCategory: 'Catatan Rilis & Kegiatan',
 					subCategoryLink: '/changelog'
 				},
 				{
@@ -71,8 +71,12 @@ export const footerNavigationData: FooterData = {
 			]
 		},
 		{
-			category: 'Tentang Nokara',
+			category: 'Tentang NOKARA.ID',
 			subCategories: [
+				{
+					subCategory: 'Induk Resmi Nokara.id',
+					subCategoryLink: 'https://nokara.id'
+				},
 				{
 					subCategory: 'Profil Founder',
 					subCategoryLink: 'https://nokara.id/about'
@@ -86,7 +90,7 @@ export const footerNavigationData: FooterData = {
 					subCategoryLink: 'https://nokara.id/services'
 				},
 				{
-					subCategory: 'Blog & Edukasi',
+					subCategory: 'Blog Komunitas',
 					subCategoryLink: '/blog'
 				}
 			]
@@ -115,6 +119,6 @@ export const footerNavigationData: FooterData = {
 	],
 	subFooter: {
 		copywriteText:
-			'© 2026 Nokara. Dibuat dengan dedikasi oleh Muhammad Amin Hidayat (Founder Nokara.id - www.nokara.id)'
+			'© 2026 Nokara Community. Bagian dari NOKARA.ID. Dibuat dengan dedikasi oleh Muhammad Amin Hidayat (Founder Nokara.id - www.nokara.id)'
 	}
 }
