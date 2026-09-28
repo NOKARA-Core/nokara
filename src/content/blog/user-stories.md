@@ -1,24 +1,26 @@
 ---
-title: 'Celebrating User Success Stories'
-pubDate: 2024-06-04T05:00:00Z
-description: 'These stories inspire us to keep innovating and improving Foxi. We are proud of what our users have achieved and are committed to helping more people reach their full potential.'
-author: 'Eleni K'
+title: 'Cerita Inovasi: Solusi Kasir Toko Kelontong Mandiri di Mimika'
+pubDate: 2026-03-20T08:00:00Z
+description: 'Kisah anggota Nokara Community yang berhasil membangun dan menerapkan sistem pencatatan penjualan sederhana untuk toko kelontong di Timika.'
+author: 'Muhammad Amin Hidayat'
 image: '/blog/post-06-cover.png'
-tags: ['reviews', 'announcement']
+tags: ['showcase', 'cerita-member']
 ---
 
-![Foxi is here.](/blog/post-06.png)
+![Karya Member Nokara Community](/blog/post-06.png)
 
-### Success Stories
+Salah satu pencapaian paling membanggakan di Nokara Community adalah ketika materi yang dipelajari bersama berhasil diwujudkan menjadi solusi nyata yang bermanfaat bagi masyarakat sekitar di Timika.
 
-- **Boosting Productivity in a Remote Team**: Sarah and her team transitioned to remote work and struggled to stay connected. With Foxi's project management and in-app messaging, they streamlined their communication and increased productivity by 40%.
-- **Organizing Personal Projects**: John, a freelance designer, used Foxi to manage his multiple client projects. The customizable dashboards allowed him to keep track of deadlines and deliverables, helping him meet his goals efficiently.
-- **Enhancing Academic Performance**: Emily, a university student, used Foxi to organize her study schedule and group projects. She saw a significant improvement in her grades and time management skills.
+Berikut adalah salah satu kisah inspiratif dari anggota komunitas yang berhasil mendigitalkan pembukuan usaha keluarga:
 
-#### User Feedback
+### Dari Pembukuan Kertas ke Sistem Digital
 
-> Foxi has completely changed how our team operates. We're more organized, communicate better, and get more done in less time.
+- **Tantangan di Lapangan**: Selama bertahun-tahun, toko kelontong di kawasan Timika masih mencatat stok dan hutang pelanggan pada buku tulis tebal. Saat pembukuan menumpuk, sering terjadi selisih persediaan dan catatan hilang.
+- **Solusi yang Dibangun**: Menggunakan pengetahuan dari jalur belajar Web & Database mandiri di Nokara Community, anggota kami merancang aplikasi kasir berbasis web lokal yang dapat diakses via tablet dan laptop tua.
+- **Hasil Nyata**: Waktu rekapitulasi harian yang dulunya memakan waktu dua jam kini selesai dalam lima menit. Pemilik toko dapat melihat laba harian secara transparan.
 
-These stories inspire us to keep innovating and improving Foxi. We are proud of what our users have achieved and are committed to helping more people reach their full potential.
+#### Ulasan Pemilik Usaha
 
-If you have a success story to share, we would love to hear from you! Contact us and let us know how Foxi has made a difference in your life.
+> Sejak memakai sistem kasir buatan anak muda Timika ini, pembukuan toko kami jauh lebih rapi dan tidak pernah lagi pusing mencari catatan nota yang terselip.
+
+Kisah seperti inilah yang memotivasi kami untuk terus mengembangkan komunitas ini. Setiap talenta di Papua memiliki potensi besar untuk menjadi inovator dan pemecah masalah di daerahnya sendiri.

@@ -1,30 +1,22 @@
 ---
-title: 'Foxi Mobile App Launch'
-pubDate: 2024-04-05T05:00:00Z
-description: 'We have rolled out new security updates to keep your data safe and secure. Learn more about our latest security enhancements and how they protect you.'
-author: 'Eleni K'
+title: 'Pengembangan Aplikasi Mobile Offline-First untuk Wilayah Papua'
+pubDate: 2026-02-10T08:00:00Z
+description: 'Tantangan kestabilan jaringan seluler di Mimika dan pedalaman Papua menuntut rekayasa aplikasi mobile yang tangguh dengan pendekatan offline-first.'
+author: 'Muhammad Amin Hidayat'
 image: '/blog/post-02-cover.png'
-tags: ['app', 'announcement']
+tags: ['mobile', 'rekayasa']
 ---
 
-The Foxi mobile app is now available! Manage your tasks and projects on the go with our new mobile app. Stay connected and productive no matter where you are.
+Konektivitas internet di kawasan Papua, khususnya di luar pusat kota Timika, sering kali mengalami fluktuasi sinyal atau bahkan tidak terjangkau jaringan sama sekali (*blank spot*). Kondisi ini menjadi tantangan nyata bagi pengembang perangkat lunak lokal saat merancang aplikasi untuk kebutuhan operasional lapangan.
 
-### Features
+Di Nokara Community, kami menekankan pentingnya paradigma **Offline-First**: aplikasi harus tetap berfungsi normal saat perangkat offline, dan menyinkronkan data secara otomatis begitu perangkat mendeteksi koneksi kembali.
 
-- **Full Functionality on Mobile**: Access all of Foxi's features from your mobile device. Manage tasks, communicate with your team, and track your projects with ease.
-- **Sync with Desktop**: Seamlessly sync your data between the mobile app and the desktop version of Foxi. Keep your information up-to-date across all devices.
-- **Offline Mode**: Use Foxi even when you don't have an internet connection. Your changes will sync automatically once you're back online.
+![Arsitektur Aplikasi Mobile Nokara](/blog/post-02.png)
 
-Download the Foxi mobile app today from the App Store or Google Play and take your productivity with you wherever you go!
+### Prinsip Utama Arsitektur Offline-First
 
-![Foxi is here.](/blog/post-02.png)
+- **Penyimpanan Lokal Sebagai Single Source of Truth**: Data transaksi, form isian, atau catatan stok disimpan terlebih dahulu pada database lokal perangkat (seperti SQLite, WatermelonDB, atau Hive).
+- **Mekanisme Antrean Sinkronisasi (Sync Queue)**: Setiap aksi pengguna dicatat dalam antrean lokal dengan timestamp dan status penundaan hingga tersambung ke server utama.
+- **Penanganan Konflik Data yang Terukur**: Menggunakan strategi resolusi konflik (misal *last-write-wins* atau aturan bisnis khusus) agar data lapangan tidak tumpang tindih saat beberapa staf mengunggah data bersamaan.
 
-We have rolled out new security updates to keep your data safe and secure. Learn more about our latest security enhancements and how they protect you.
-
-### App Enhancements
-
-- **Two-Factor Authentication**: Add an extra layer of security to your account with two-factor authentication. This feature requires you to verify your identity using a second device or method.
-- **Data Encryption**: All data transmitted and stored within Foxi is now encrypted using industry-standard encryption protocols. Your information is protected from unauthorized access.
-- **Regular Security Audits**: We conduct regular security audits to identify and address potential vulnerabilities. Our commitment to security ensures that your data remains safe.
-
-Your security is our top priority. Thank you for trusting Foxi with your valuable data.
+Dengan merancang aplikasi yang tahan banting di kondisi internet minim, talenta pengembang di Timika dapat menghasilkan solusi teknologi yang benar-benar relevan bagi masyarakat dan dunia usaha lokal.

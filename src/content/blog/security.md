@@ -1,22 +1,23 @@
 ---
-title: 'Security Enhancements now here!'
-pubDate: 2024-05-05T05:00:00Z
-description: 'The Foxi mobile app is now available! Manage your tasks and projects on the go with our new mobile app. Stay connected and productive no matter where you are.'
-author: 'Christos P'
+title: 'Praktik Keamanan Siber Esensial untuk Server & Jaringan Daerah'
+pubDate: 2026-02-25T08:00:00Z
+description: 'Langkah-langkah praktis hardening server Linux, penutupan port rentan, dan proteksi database bagi sysadmin dan teknisi jaringan di Papua.'
+author: 'Muhammad Amin Hidayat'
 image: '/blog/post-03-cover.png'
-tags: ['productivity', 'app']
+tags: ['keamanan', 'devops']
 ---
 
-The Foxi mobile app is now available! Manage your tasks and projects on the go with our new mobile app. Stay connected and productive no matter where you are.
+Mengelola server Virtual Private Server (VPS) atau komputer server mandiri di kantor distrik, sekolah, maupun tempat usaha di Papua memerlukan perhatian serius terhadap keamanan siber. Kurangnya konfigurasi dasar sering kali menjadi celah masuk bagi pemindaian bot otomatis dari internet.
 
-![Foxi is here.](/blog/post-03.png)
+Di Nokara Community, kami membagikan beberapa langkah hardening esensial yang dapat diterapkan oleh teknisi dan pengelola sistem lokal:
 
-We have rolled out new security updates to keep your data safe and secure. Learn more about our latest security enhancements and how they protect you.
+![Keamanan Server Nokara](/blog/post-03.png)
 
-### Security Enhancements
+### Checklist Hardening Server Mandiri
 
-- **Two-Factor Authentication**: Add an extra layer of security to your account with two-factor authentication. This feature requires you to verify your identity using a second device or method.
-- **Data Encryption**: All data transmitted and stored within Foxi is now encrypted using industry-standard encryption protocols. Your information is protected from unauthorized access.
-- **Regular Security Audits**: We conduct regular security audits to identify and address potential vulnerabilities. Our commitment to security ensures that your data remains safe.
+- **Nonaktifkan Login Root via SSH**: Selalu buat akun pengguna khusus dengan hak sudo, dan ubah pengaturan SSH (`PermitRootLogin no`) untuk memitigasi serangan brute-force.
+- **Wajibkan Autentikasi Kunci SSH (SSH Key)**: Hindari login berbasis kata sandi biasa yang mudah ditebak; gunakan pasangan public-private key.
+- **Konfigurasi Firewall (UFW)**: Tutup seluruh port yang tidak digunakan dan hanya izinkan port esensial (seperti port 80/443 untuk web dan port SSH khusus).
+- **Automated Backup Terenkripsi**: Cadangkan database secara terjadwal ke penyimpanan cloud terpisah, sehingga data operasional tetap selamat meski perangkat fisik mengalami kerusakan.
 
-Your security is our top priority. Thank you for trusting Foxi with your valuable data.
+Keamanan sistem bukan tentang menggunakan alat yang mahal, melainkan menerapkan disiplin konfigurasi yang konsisten sejak hari pertama sistem dibangun.

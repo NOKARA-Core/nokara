@@ -10,7 +10,6 @@
 // - UI
 import Card from '../../ui/cards/partials/Card.astro'
 import CardBody from '../../ui/cards/partials/CardBody.astro'
-import Form from '../../ui/forms/Form.astro'
 import FormField from '../../ui/forms/partials/FormField.astro'
 import InputField from '../../ui/forms/form-elements/InputField.astro'
 import TextArea from '../../ui/forms/form-elements/TextArea.astro'
@@ -25,20 +24,45 @@ const { classes } = Astro.props
 
 <Card classes={classes}>
 	<CardBody>
-		<Form>
-			<h2 class="text-2xl">Get in Touch</h2>
+		<form id="contact-form" action="mailto:contact@nokara.id" method="POST" enctype="text/plain">
+			<h2 class="text-2xl font-bold mb-6 text-neutral-900 dark:text-neutral-50">Kirim Pesan ke Komunitas</h2>
 			<FormField>
-				<InputField type="text" id="firstName" label="First Name" />
-				<InputField type="text" id="lastName" label="Last Name" />
+				<InputField type="text" id="firstName" label="Nama Depan" required />
+				<InputField type="text" id="lastName" label="Nama Belakang" />
 			</FormField>
 			<FormField>
-				<InputField type="email" id="email" label="Email" required value="name@youremail.com" />
+				<InputField type="email" id="email" label="Alamat Email Anda" required />
 			</FormField>
 			<FormField>
-				<InputField type="tel" id="phone" label="phone number" />
+				<InputField type="tel" id="phone" label="Nomor WhatsApp / HP" />
 			</FormField>
-			<FormField><TextArea id="message" label="Your Message" /></FormField>
-			<Button style="primary" type="submit">Submit</Button>
-		</Form>
+			<FormField>
+				<TextArea id="message" label="Pesan atau Pertanyaan Anda" required />
+			</FormField>
+			<Button style="primary" type="submit" classes="w-full justify-center mt-2">
+				Kirim ke contact@nokara.id
+			</Button>
+		</form>
 	</CardBody>
 </Card>
+
+<script>
+	const contactForm = document.getElementById('contact-form') as HTMLFormElement | null
+	if (contactForm) {
+		contactForm.addEventListener('submit', (e) => {
+			e.preventDefault()
+			const firstName = (document.getElementById('firstName') as HTMLInputElement)?.value.trim() || ''
+			const lastName = (document.getElementById('lastName') as HTMLInputElement)?.value.trim() || ''
+			const email = (document.getElementById('email') as HTMLInputElement)?.value.trim() || ''
+			const phone = (document.getElementById('phone') as HTMLInputElement)?.value.trim() || ''
+			const message = (document.getElementById('message') as HTMLTextAreaElement)?.value.trim() || ''
+
+			const fullName = [firstName, lastName].filter(Boolean).join(' ')
+			const subject = encodeURIComponent(`[Nokara Community] Pesan dari ${fullName || 'Pengunjung'}`)
+			const body = encodeURIComponent(
+				`Nama: ${fullName}\nEmail: ${email}\nNo. HP/WhatsApp: ${phone}\n\nPesan:\n${message}\n\n---\nDikirim via Formulir Kontak Nokara Community (Timika, Papua)`
+			)
+			window.location.href = `mailto:contact@nokara.id?subject=${subject}&body=${body}`
+		})
+	}
+</script>

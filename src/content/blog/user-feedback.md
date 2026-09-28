@@ -1,21 +1,22 @@
 ---
-title: 'User feedback on foxi'
-pubDate: 2024-05-05T05:00:00Z
-description: "Your feedback is crucial to us. We are constantly striving to improve Foxi based on your suggestions. Here are some of the latest improvements.
-"
-author: 'Eleni K'
+title: 'Suara Komunitas: Menjembatani Talenta Lokal Menuju Industri'
+pubDate: 2026-03-01T08:00:00Z
+description: 'Pengalaman dan evaluasi dari anggota Nokara Community di Timika setelah mengikuti roadmap belajar mandiri dan sesi diskusi teknis.'
+author: 'Muhammad Amin Hidayat'
 image: '/blog/post-04-cover.png'
-tags: ['productivity', 'app']
+tags: ['komunitas', 'edukasi']
 ---
 
-Your feedback is crucial to us. We are constantly striving to improve Foxi based on your suggestions. Here are some of the latest improvements we've made thanks to your valuable feedback.
+Sejak inisiatif Nokara Community dimulai di Timika, kami menerima banyak cerita dan masukan dari rekan-rekan pegiat IT—mulai dari pelajar yang baru belajar dasar HTML, teknisi jaringan warnet/ISP lokal, hingga staf kantor distrik yang merawat perangkat komputer.
 
-![Foxi is here.](/blog/post-01.png)
+Masukan-masukan ini membantu kami menyempurnakan kurikulum belajar agar semakin realistis dengan kondisi riil di tanah Papua.
 
-### Improvements
+![Kegiatan Komunitas Nokara Timika](/blog/post-01.png)
 
-1. **Enhanced Performance**: We've optimized the app to run faster and more efficiently, ensuring a smooth user experience.
-2. **Bug Fixes**: Our team has addressed various bugs and issues reported by users. Thank you for helping us identify and resolve these problems.
-3. **New User Interface Tweaks**: We've made several UI adjustments to enhance usability and aesthetics. These changes are designed to make Foxi more intuitive and visually appealing.
+### Poin Refleksi Penting dari Member
 
-Download the Foxi mobile app today from the App Store or Google Play and take your productivity with you wherever you go!
+1. **Kebutuhan Contoh Kode yang Nyata**: Anggota lebih cepat memahami konsep pemrograman saat studi kasus yang diangkat berhubungan langsung dengan pekerjaan sehari-hari, seperti sistem kasir toko atau form rekap data warga.
+2. **Pentingnya Pemahaman Dasar Linux**: Bagi teknisi jaringan di daerah, kemampuan mengoperasikan terminal Linux Ubuntu Server membuka banyak peluang untuk mengelola router MikroTik dan VPS mandiri.
+3. **Ruang Diskusi yang Bebas Rasa Takut**: Adanya grup komunitas yang ramah pemula membuat anggota tidak lagi ragu bertanya seputar pesan eror koding yang membingungkan.
+
+Nokara Community terus berkomitmen mendengarkan aspirasi rekan-rekan di Mimika demi mencetak generasi talenta digital yang mandiri dan berdaya saing.

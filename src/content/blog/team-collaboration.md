@@ -1,26 +1,26 @@
 ---
-title: 'Enhancing Team Collaboration'
-pubDate: 2024-06-04T05:00:00Z
-description: 'At Foxi, we believe that effective team collaboration is key to achieving great results. Our latest update introduces new features designed to enhance how your team works together.'
-author: 'Eleni K'
+title: 'Kolaborasi Git & Manajemen Kode untuk Tim Developer Pemula'
+pubDate: 2026-03-12T08:00:00Z
+description: 'Membangun alur kerja tim rekayasa perangkat lunak yang rapi menggunakan Git branch, pull request, dan review kode bersama di komunitas.'
+author: 'Muhammad Amin Hidayat'
 image: '/blog/post-05-cover.png'
-tags: ['app', 'announcement']
+tags: ['pemrograman', 'kolaborasi']
 ---
 
-![Foxi is here.](/blog/post-05.png)
+![Kolaborasi Pengembang Nokara](/blog/post-05.png)
 
-At Foxi, we believe that effective team collaboration is key to achieving great results. Our latest update introduces new features designed to enhance how your team works together.
+Menulis kode sendiri mungkin terasa cepat pada awalnya, namun ketika mengerjakan proyek sistem bersama rekan tim—misalnya membangun website profil sekolah atau aplikasi kasir toko—pengelolaan versi kode (Version Control System) menjadi keterampilan yang mutlak dibutuhkan.
 
-### New Collaboration Features
+Di Nokara Community, kami membiasakan seluruh anggota untuk menggunakan Git dan GitHub sejak awal belajar, agar terbiasa dengan standar kerja industri teknologi modern.
 
-- **Shared Task Lists**: Create and share task lists with your team. Keep everyone on the same page and ensure that no task is overlooked.
-- **Team Messaging Enhancements**: We've improved our in-app messaging with new features like message threading, mentions, and file sharing to make communication smoother and more organized.
-- **Collaborative Notes**: Take notes during meetings and brainstorming sessions, and share them with your team instantly. Everyone can contribute and stay updated.
+### Alur Kerja Kolaborasi Standar
 
-#### Why Collaboration Matters
+- **Branch Terpisah Per Fitur (Feature Branching)**: Jangan pernah mengedit langsung di branch `main`. Buat branch baru untuk setiap fitur atau perbaikan bug (contoh: `fitur/halaman-produk`).
+- **Pesan Commit yang Jelas dan Deskriptif**: Tuliskan pesan commit yang menjelaskan *apa* dan *mengapa* perubahan itu dibuat, bukan sekadar "update kode" atau "fix error".
+- **Pull Request & Peer Code Review**: Sebelum kode digabungkan ke cabang utama, rekan tim dapat memeriksa logika, keamanan, dan kebersihan kode untuk saling belajar.
 
-> The strength of the team is each individual member. The strength of each member is the team.
+#### Kekuatan Kolaborasi
 
-Effective collaboration leads to better decision-making, faster problem-solving, and a more engaged team. With these new features, Foxi is more equipped than ever to help your team succeed.
+> Kekuatan sebuah tim rekayasa perangkat lunak terletak pada keterbukaan untuk saling memeriksa kode dan belajar bersama demi kualitas sistem yang lebih andal.
 
-Start using these features today and see the difference in your team's productivity and collaboration.
+Dengan menguasai alur kerja kolaboratif ini, talenta IT di Timika siap berkolaborasi dalam proyek skala besar maupun berkontribusi pada proyek open-source nasional dan global.
